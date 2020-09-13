@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+  <main id="main">
+  <br>
+  <!-- ======= Breadcrumbs ======= -->
+  <section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+
+      <div class="d-flex justify-content-between align-items-center">
+        <h2>Blog</h2>
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li>Blog</li>
+        </ol>
+      </div>
+
+    </div>
+  </section><!-- End Breadcrumbs -->
+
+  <!-- ======= Blog Section ======= -->
+  <section id="blog" class="blog">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 entries">
+            <!-- ======= repeat objects ======= -->
+          {% for art in articles %}
+          <article class="entry" data-aos="fade-up">
+            <div class="entry-img">
+                 <img src="{{ MEDIA_URL }}/{{ art.image_file }}" alt="" class="img-fluid">
+            </div>
+            <h2 class="entry-title">
+              <a href="blog-single.html">{{art.caption}}</a>
+            </h2>
+            <div class="entry-meta">
+              <ul>
+                <li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="blog-single.html">{{art.author}}</a></li>
+                <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">{{art.date_added}}</time></a></li>
+                <li class="d-flex align-items-center"><i class="icofont-comment"></i> <a href="blog-single.html">12 Comments</a></li>
+              </ul>
+            </div>
+            <div class="entry-content">
+              <p>
+                {{art.extract}}</p>
+              <div class="read-more">
+                <a href="{% url 'lcore:show_pdf' pk=art.id %}">Read More</a>
+              </div>
+            </div>
+          </article>
+          {% endfor %}
+
+
+  <!-- End blog entry -->
+
+  <div class="blog-pagination">
+    <ul class="justify-content-center">
+      <li class="disabled"><i class="icofont-rounded-left"></i></li>
+      <li><a href="#">1</a></li>
+      <li class="active"><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#"><i class="icofont-rounded-right"></i></a></li>
+    </ul>
+  </div>
+
+  </div><!-- End blog entries list -->
+
+  <!-- Sidebar -->
+  <div class="col-lg-4">
+    <div class="sidebar" data-aos="fade-left">
+
+      <h3 class="sidebar-title">Search</h3>
+      <div class="sidebar-item search-form">
+        <form action="">
+          <input type="text">
+          <button type="submit"><i class="icofont-search"></i></button>
+        </form>
+      </div><!-- End sidebar search formn-->
+
+      <h3 class="sidebar-title">Categories</h3>
+      <div class="sidebar-item categories">
+        {% if category_count %}
+        <ul>
+          {% for c in category_count %}
+          <li><a href="#">{{c.name}} <span>({{c.cat_count}})</span></a></li>
+          {% endfor %}
+        </ul>
+        {% else %}
+        {% endif %}
+      </div><!-- End sidebar categories-->
+
+      <h3 class="sidebar-title">Recent Posts</h3>
+      <div class="sidebar-item recent-posts">
+        {% if recent_articles %}
+        {% for a in recent_articles %}
+        <div class="post-item clearfix">
+          <!--<img src="{% static 'images/blog-recent-posts-1.jpg' %}" alt=""/>-->
+          <img src="{{ MEDIA_URL }}/{{ a.image_file }}" alt="">
+
+          <h4><a href="blog-single.html">{{ a.caption }}</a></h4>
+          <time datetime="2020-01-01">{{ a.date_added }}</time>
+        </div>
+        {% endfor %}
+        {% else %}
+          <h4>Nothing yet</h4>
+        {% endif %}
+      </div><!-- End sidebar recent posts-->
+<!--<link href="{% static 'images/' %}" rel=""> -->
+
+            <h3 class="sidebar-title">Tags</h3>
+            <div class="sidebar-item tags">
+              {% if active_tags %}
+              <ul>
+                {% for t in active_tags %}
+                  <li><a href="#">{{ t.tag }}</a></li>
+                {% endfor %}
+              </ul>
+              {% endif %}
+
+            </div><!-- End sidebar tags-->
+
+          </div><!-- End sidebar -->
+
+        </div><!-- End blog sidebar -->
+
+      </div>
+
+    </div>
+  </section><!-- End Blog Section -->
+
+  </main><!-- End #main -->
+{% endblock content %}

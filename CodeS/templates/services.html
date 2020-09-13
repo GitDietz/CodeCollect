@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<main id="main">
+<br>
+  <!-- ======= Breadcrumbs ======= -->
+  <section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+
+      <div class="d-flex justify-content-between align-items-center">
+        <h2>Services</h2>
+        <ol>
+          <li><a href="{% url 'lcore:home' %}">Home</a></li>
+          <li>Services</li>
+        </ol>
+      </div>
+
+    </div>
+  </section><!-- End Breadcrumbs -->
+<!-- ======= Services Section ======= -->
+  <section id="services" class="services section-bg">
+    <div class="container" data-aos="fade-up">
+      {% if services%}
+      <div class="row">
+        {% for s in services %}
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+          <div class="icon-box iconbox-blue">
+            <div class="icon">
+              <img src="{{ MEDIA_URL }}/{{ s.image_file }}" alt="" style="width:100px;height:100px;">
+            </div>
+            <h4><a href="">{{s.service}}</a></h4>
+            <p>{{ s.descrip }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      {% endif %}
+      </div>
+    </div>
+  </section><!-- End Services Section -->
+
+  <!-- ======= Features Section ======= -->
+  <section id="features" class="features">
+    <div class="container" data-aos="fade-up">
+      {% if features %}
+
+
+      <div class="section-title">
+        <h2>Features</h2>
+        <p>Deployment of these services puts your organisation on the road to delivering the below features or benefits</p>
+      </div>
+      <div class="row">
+      {% for f in features %}
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <!--<i class="ri-database-2-line" style="color: #47aeff;"></i> -->
+            <h3>{{ f.feature }}</h3>
+            <!-- TODO add detail on each with link -->
+          </div>
+        </div>
+      {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    </div>
+  </section><!-- End Features Section -->
+</main><!-- End #main -->
+{% endblock content %}

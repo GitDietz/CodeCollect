@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<main id="main">
+<br>
+<!-- ======= Breadcrumbs ======= -->
+<section id="breadcrumbs" class="breadcrumbs">
+  <div class="container">
+
+    <div class="d-flex justify-content-between align-items-center">
+      <h2>Contact</h2>
+      <ol>
+        <li><a href="{% url 'lcore:home' %}">Home</a></li>
+        <li>Contact</li>
+      </ol>
+    </div>
+
+  </div>
+</section><!-- End Breadcrumbs -->
+<div class="row content">
+        <div class="col-lg-10" data-aos="fade-right">
+          <h4>Get in contact with your enquiry. Let's see how we can help</h4>
+        </div>
+</div>
+
+<div class="row mt-5 justify-content-center" data-aos="fade-up">
+    <div class="col-lg-10">
+      <form method="POST" role="form" action="">
+        {% csrf_token %}
+          <div class="form-row">
+            <div class="col-md-5 form-group">
+              <th></th>
+                <td>
+                  {{ form.full_name.errors }}
+                  {{ form.full_name }}
+                </td>
+            </div>
+            <div class="col-md-5 form-group">
+              <th></th>
+                <td>
+                  {{ form.email.errors }}
+                  {{ form.email }}
+                </td>
+            </div>
+          </div>
+          <div class="form-group">
+            <th></th>
+                <td>
+                  {{ form.subject.errors }}
+                  {{ form.subject }}
+                </td>
+          </div>
+          <div class="form-group">
+            <th></th>
+                <td>
+                  {{ form.content.errors }}
+                  {{ form.content }}
+                </td>
+          </div>
+          {% if messages %}
+          <div class="mb-3">
+            <ul class="list-group">
+              {% for message in messages %}
+                {% if message.tags == 'success' %}
+                  <li class="list-group-item list-group-item-success">{{ message.tags|title }} - {{ message }}</li>
+                {% else %}
+                  <li class="list-group-item list-group-item-danger">{{ message.tags|title }} - {{ message }}</li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+          {% endif %}
+
+          <div class="text-center" id="sender"><input type="submit" value="Send Enquiry"></input></div>
+      </form>
+
+    </div>
+</div>
+</main><!-- End #main -->
+<script>
+
+</script>
+
+{% endblock content %}
