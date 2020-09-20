@@ -106,6 +106,16 @@ class SkillManager(models.Manager):
         return qs
 
 
+class ProcessManager(models.Manager):
+    def all(self):
+        qs = super(ProcessManager, self).all()
+        return qs
+
+    def active(self):
+        qs = super(ProcessManager, self).filter(active=True)
+        return qs
+
+
 # ## Models ## #
 class Author(models.Model):
     """
@@ -176,6 +186,23 @@ class Article(models.Model):
         return self.caption.title()
 
 
+class Process(models.Model):
+    """
+    automtion project
+    """
+    process = models.CharField(max_length=100, unique=True)
+    description = models.CharField(max_length=300, unique=False)
+    active = models.BooleanField(default=True)
+    objects = ProcessManager()
+
+    class Meta:
+        ordering = ['process']
+        verbose_name_plural = 'Processes'
+
+    def __str__(self):
+        return self.process.title()
+
+
 class Code(models.Model):
     """
     Code segment
@@ -189,6 +216,7 @@ class Code(models.Model):
     draft = models.BooleanField(default=True)
     visible = models.BooleanField(default=True)
     tags = models.ManyToManyField(Tag, blank=True)
+    process = models.ManyToManyField(Process, blank=True)
     article_file = models.FileField(upload_to='blog_article', blank=True, null=True)
     objects = CodeManager()
 
@@ -225,6 +253,7 @@ class Services(models.Model):
 
     class Meta:
         ordering = ['priority']
+        verbose_name_plural = 'Services'
 
     def __str__(self):
         return self.service.title()
@@ -277,3 +306,5 @@ class Skill(models.Model):
 
     def __str__(self):
         return self.skill.title()
+
+

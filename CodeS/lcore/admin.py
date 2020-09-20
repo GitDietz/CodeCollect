@@ -1,6 +1,7 @@
 from django.contrib import admin
 
-from .models import Services, Reference, Article, Category, Tag, Customer, Feature, Skill, Author, Code
+from .models import (Services, Reference, Article, 
+Category, Tag, Customer, Feature, Skill, Author, Code, Process )
 
 
 class ArticleAdmin(admin.ModelAdmin):
@@ -102,3 +103,13 @@ class SkillAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Skill, SkillAdmin)
+
+
+class ProcessAdmin(admin.ModelAdmin):
+    list_display = ['process', 'active']
+
+    class Meta:
+        model = Process
+
+
+admin.site.register(Process, ProcessAdmin)
