@@ -1,6 +1,8 @@
 from django import forms
 from django.core.exceptions import ValidationError
 
+from .models import Code
+
 class ContactForm(forms.Form):
     full_name = forms.CharField(label= "Your name and surname", required=True, widget=forms.TextInput
                            (attrs={'placeholder': 'Your full name'}))
@@ -13,3 +15,9 @@ class ContactForm(forms.Form):
 
     class Meta:
         fields = ['full_name', 'email', 'subject', 'content']
+
+
+class CodeForm(forms.Form):
+    class Meta:
+        fields = ['__all__']
+        

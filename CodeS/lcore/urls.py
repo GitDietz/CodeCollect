@@ -4,13 +4,14 @@ from django.contrib import admin
 from django.urls import include, path, re_path
 from django.views import defaults as default_views
 
-from .views import base, blog, home, pdf, services, about, show_pdf, contact
+from .views import base, blog, home, pdf, services, about, show_pdf, contact, code_list
 
 app_name = 'lcore'
 urlpatterns = [
     # path("home", TemplateView.as_view(template_name="pages/home.html"), name="home"),
     path('about', about, name='about'),
     path('base', base, name='base'),
+    path('code_list', code_list, name='code_list'),
     path('contact', contact, name='contact'),
     path('blog', blog, name='blog'),
     path('home', home, name='home'),

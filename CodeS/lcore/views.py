@@ -7,7 +7,7 @@ from django.shortcuts import render, redirect
 
 from .email import send_email
 from .forms import ContactForm
-from .models import Services, Reference, Article, Category, Tag, Feature, Skill
+from .models import Services, Reference, Article, Category, Tag, Feature, Skill, Code, Process
 
 
 def get_base_context():
@@ -154,3 +154,15 @@ def contact(request):
     }
     context = {**get_base_context(), **local_context}
     return render(request, template_name, context)
+
+########################## Code related #############################
+
+def code_list(request):
+    codelist = Code.objects.all()
+    template = 'code_list.html'
+    local_context = {
+        'codelist': codelist,
+    }
+
+    context = {**get_base_context(), **local_context}
+    return render(request, template, context)
