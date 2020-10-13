@@ -1,11 +1,13 @@
 import pathlib
 from django.conf import settings as conf_settings
 from django.contrib import messages
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db import connection
 from django.http import FileResponse
 from django.shortcuts import render, redirect
 
 from .email import send_email
+from .filter import CodeFilter
 from .forms import ContactForm
 from .models import Services, Reference, Article, Category, Tag, Feature, Skill, Code, Process
 
@@ -158,10 +160,35 @@ def contact(request):
 ########################## Code related #############################
 
 def code_list(request):
-    codelist = Code.objects.all()
+    get_dict = request.POST.copy()
+    #    print('Post method tested')
+    if not get_dict:
+        get_dict = request.GET.copy()
+        print('GET method tested')
+    print(f'Request is : {get_dict}')
+    try:
+        del get_dict['page']
+    except KeyError:
+        print('No page indicator on GET')
+
+    codelist = Code.objects.all().order_by('extract')
+    code_filtered = CodeFilter(get_dict, queryset=codelist)
+    code_qs = code_filtered.qs
+    page = request.GET.get('page', 1)
+    paginator = Paginator(code_qs, 10)
+    print(f'Paginator: {paginator}')
+    try:
+        code_page = paginator.page(page)
+    except PageNotAnInteger:
+        code_page = paginator.page(1)
+    except EmptyPage:
+        code_page = paginator.page(paginator.num_pages)
+
     template = 'code_list.html'
     local_context = {
-        'codelist': codelist,
+        'object_list': code_page,
+        'filter_form': code_filtered,
+        'notice': 'Some sort of notice',
     }
 
     context = {**get_base_context(), **local_context}

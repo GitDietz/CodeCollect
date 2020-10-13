@@ -47,10 +47,20 @@ LOCALE_PATHS = [str(ROOT_DIR / "locale")]
 # DATABASES = {
 #     #"default": env.db("DATABASE_URL", default="postgres:///CodeS")
 # }
+# DATABASES = {
+#     "default": {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': str(ROOT_DIR / 'db.sqlite'),
+#     }
+# }
 DATABASES = {
     "default": {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': str(ROOT_DIR / 'db.sqlite'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'CodeCollect',
+        'USER': 'codemaster',
+        'PASSWORD': 'CodePass00',
+        'HOST': '127.0.0.1',
+        'PORT': '5432'
     }
 }
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
@@ -194,6 +204,9 @@ TEMPLATES = [
                 "django.contrib.messages.context_processors.messages",
                 "CodeS.utils.context_processors.settings_context",
             ],
+            'libraries': {
+                 'customtags': 'templatetags.customtags', #can add others in the same way
+            },
         },
     }
 ]
