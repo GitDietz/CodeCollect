@@ -160,6 +160,11 @@ def contact(request):
 ########################## Code related #############################
 
 def code_list(request):
+    """
+     ', '.join(mylist)
+     .objects.values()
+     but call list(on the above values) to get a true list
+    """
     get_dict = request.POST.copy()
     #    print('Post method tested')
     if not get_dict:
@@ -193,3 +198,20 @@ def code_list(request):
 
     context = {**get_base_context(), **local_context}
     return render(request, template, context)
+
+
+def test(request):
+    """
+    just to test teh build of a queryset
+    """
+    related_qs = Code.objects.all()
+    with connection.cursor() as cursor:
+        sql = ("Select C.name, count(C.name) as cat_count from lcore_article_category as JJ inner join"
+               " lcore_category C on JJ.category_id = C.id group by name;")
+        print(sql)
+        cursor.execute(sql)
+        columns = [col[0] for col in cursor.description]
+        category_count = [
+            dict(zip(columns, row))
+            for row in cursor.fetchall()
+        ]

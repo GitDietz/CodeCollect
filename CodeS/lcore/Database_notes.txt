@@ -1,0 +1,8 @@
+Database notes
+select C.id, C.extract, string_agg(T.tag, ',') as Tags
+from lcore_code as C left join
+lcore_code_tags as CT on C.id = CT.code_id inner join
+lcore_tag as T on CT.tag_id = T.id
+group by C.id
+order by C.id
+;
