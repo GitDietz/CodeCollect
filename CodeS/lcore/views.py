@@ -30,6 +30,26 @@ def get_base_context():
             }
 
 
+def get_direct_query_dict(sql_query):
+    """
+    build of a queryset by using a direct query for data set structures that are complex for the ORM
+    right now it only creates a dict
+    """
+    with connection.cursor() as cursor:
+        # sql = ("select C.id, C.extract, string_agg(T.tag, ',') as Tags from lcore_code as C left join "
+        #        "lcore_code_tags as CT on C.id = CT.code_id inner join lcore_tag as T on CT.tag_id = T.id "
+        #         "group by C.id order by C.id;")
+        # print(sql)
+        cursor.execute(sql_query)
+        columns = [col[0] for col in cursor.description]
+        out_qs = [
+            dict(zip(columns, row))
+            for row in cursor.fetchall()
+        ]
+    print(out_qs)
+    return out_qs
+
+
 def base(request):
     template = "base.html"
     context = {}
@@ -176,8 +196,21 @@ def code_list(request):
     except KeyError:
         print('No page indicator on GET')
 
-    codelist = Code.objects.all().order_by('extract')
+    sub_query = "select C.id, C.extract, string_agg(T.tag, ',') as Tags from lcore_code as C left join " \
+                "lcore_code_tags as CT on C.id = CT.code_id inner join lcore_tag as T on CT.tag_id = T.id " \
+                "group by C.id order by C.id;"
+    new_query = "select string_agg(T.tag, ',') as Tags from lcore_code as C left join " \
+                "lcore_code_tags as CT on C.id = CT.code_id inner join lcore_tag as T on CT.tag_id = T.id " \
+                "group by C.id order by C.id;"
+    # codelist = Code.objects.all().order_by('extract')
+    # codelist = get_direct_query_dict()
+
+    # codelist = Code.objects.all().order_by('extract').extra(select={ 'TagList': new_query},) not working
+    # codelist = Code.objects.raw(sub_query) yields the raw queryset type which does not work here
+    codelist = Code.objects.all()
+
     code_filtered = CodeFilter(get_dict, queryset=codelist)
+    # what type of object is code_filtered?
     code_qs = code_filtered.qs
     page = request.GET.get('page', 1)
     paginator = Paginator(code_qs, 10)
@@ -204,14 +237,19 @@ def test(request):
     """
     just to test teh build of a queryset
     """
-    related_qs = Code.objects.all()
+    # related_qs = Code.objects.all()
+
+
     with connection.cursor() as cursor:
-        sql = ("Select C.name, count(C.name) as cat_count from lcore_article_category as JJ inner join"
-               " lcore_category C on JJ.category_id = C.id group by name;")
+        sql = ("select C.id, C.extract, string_agg(T.tag, ',') as Tags from lcore_code as C left join "
+               "lcore_code_tags as CT on C.id = CT.code_id inner join lcore_tag as T on CT.tag_id = T.id "
+                "group by C.id order by C.id;")
         print(sql)
         cursor.execute(sql)
         columns = [col[0] for col in cursor.description]
-        category_count = [
+        related_qs = [
             dict(zip(columns, row))
             for row in cursor.fetchall()
         ]
+    print(related_qs)
+    return redirect('lcore:code_list')

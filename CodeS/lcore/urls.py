@@ -4,7 +4,7 @@ from django.contrib import admin
 from django.urls import include, path, re_path
 from django.views import defaults as default_views
 
-from .views import base, blog, home, pdf, services, about, show_pdf, contact, code_list
+from .views import base, blog, home, pdf, services, about, show_pdf, contact, code_list, test
 
 app_name = 'lcore'
 urlpatterns = [
@@ -17,5 +17,6 @@ urlpatterns = [
     path('home', home, name='home'),
     path('pdf', pdf, name='pdf'),
     path('services', services, name='services'),
+    path('test', test, name='test'),
     re_path('article/(?P<pk>\d+)', show_pdf, name='show_pdf'),
     ]
