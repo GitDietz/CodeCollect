@@ -181,41 +181,20 @@ def contact(request):
 
 def code_list(request):
     """
-     ', '.join(mylist)
-     .objects.values()
-     but call list(on the above values) to get a true list
+
     """
     get_dict = request.POST.copy()
-    #    print('Post method tested')
     if not get_dict:
         get_dict = request.GET.copy()
         print('GET method tested')
-    print(f'Request is : {get_dict}')
     try:
         del get_dict['page']
     except KeyError:
         print('No page indicator on GET')
 
-    sub_query = "select C.id, C.extract, string_agg(T.tag, ',') as Tags from lcore_code as C left join " \
-                "lcore_code_tags as CT on C.id = CT.code_id inner join lcore_tag as T on CT.tag_id = T.id " \
-                "group by C.id order by C.id;"
-    new_query = "select C.id, string_agg(T.tag, ',') as Tags from lcore_code as C left join " \
-                "lcore_code_tags as CT on C.id = CT.code_id inner join lcore_tag as T on CT.tag_id = T.id " \
-                "group by C.id order by C.id;"
-    codelist = Code.objects.all().order_by('extract')
-    # codelist = get_direct_query_dict()
-
-    # codelist = Code.objects.all().order_by('extract').extra(select={ 'TagList': new_query},) not working
-    # codelist = Code.objects.raw(sub_query) # yields the raw queryset type which does not work here
-    # codelist = Code.objects.all()
-
+    codelist = Code.objects.all().order_by('extract').prefetch_related('tags').all()
     code_filtered = CodeFilter(get_dict, queryset=codelist)
-    #code_filtered = codelist
-    # what type of object is code_filtered?
     code_qs = code_filtered.qs
-    code_ids = list(code_qs.values_list('id', flat=True))
-    filter_query = new_query.replace("group","where C.id in (" +  ",".join(map(str,code_ids)) + ") group")
-    tag_list = get_direct_query_dict(filter_query)
     page = request.GET.get('page', 1)
     paginator = Paginator(code_qs, 10)
     try:
@@ -228,7 +207,6 @@ def code_list(request):
     template = 'code_list.html'
     local_context = {
         'object_list': code_page,
-        'tag_list': tag_list,
         'filter_form': code_filtered,
         'notice': 'Some sort of notice',
     }
@@ -239,10 +217,9 @@ def code_list(request):
 
 def test(request):
     """
-    just to test teh build of a queryset
+    just to test the build of a queryset
     """
     # related_qs = Code.objects.all()
-
 
     with connection.cursor() as cursor:
         sql = ("select C.id, C.extract, string_agg(T.tag, ',') as Tags from lcore_code as C left join "
@@ -257,3 +234,23 @@ def test(request):
         ]
     print(related_qs)
     return redirect('lcore:code_list')
+
+
+def experiments(request):
+    sub_query = "select C.id, C.extract, string_agg(T.tag, ',') as Tags from lcore_code as C left join " \
+                "lcore_code_tags as CT on C.id = CT.code_id inner join lcore_tag as T on CT.tag_id = T.id " \
+                "group by C.id order by C.id;"
+    new_query = "select C.id, string_agg(T.tag, ',') as Tags from lcore_code as C left join " \
+                "lcore_code_tags as CT on C.id = CT.code_id inner join lcore_tag as T on CT.tag_id = T.id " \
+                "group by C.id order by C.id;"
+    # codelist = get_direct_query_dict()
+    # codelist = Code.objects.all().order_by('extract').extra(select={ 'TagList': new_query},) not working
+    # codelist = Code.objects.raw(sub_query) # yields the raw queryset type which does not work here
+    # codelist = Code.objects.all()
+    # code_ids = list(code_qs.values_list('id', flat=True))
+    filter_query = new_query.replace("group","where C.id in (" +  ",".join(map(str,code_ids)) + ") group")
+    tag_list = get_direct_query_dict(filter_query)
+
+    #'tag_list': tag_list
+    return None    
+
