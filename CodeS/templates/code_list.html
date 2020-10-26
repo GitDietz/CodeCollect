@@ -29,23 +29,21 @@
 
 <div class="row mt-5 justify-content-center" data-aos="fade-up">
     <div class="col-lg-10">
-
-      {% if object_list%}
-        {% for code in object_list %}
-          <div class="form-row">
-            <div class="col-lg-7">
-                  {{code.pk}} - {{ code.extract }} Count = 
-                  {{ code.tags_set.all.count }}
-                  {% for tag in code.tags_set.all %}
-                    {{ tag }}
-                  {% endfor %}
-            </div>
-
+      {% for code in object_list %}
+        <div class="form-row">
+          <div class="col-lg-7">
+            {{code.pk}} - {{ code.extract }}
+              {% if code.tags.count %} [{% endif %}
+                {% for tag in code.tags.all %}
+                  {% if forloop.counter > 1%}, {% endif %}
+                  {{ tag }}
+                {% endfor %}
+              {% if code.tags.count %}]{% endif %}
           </div>
-        {% endfor %}
-      {% else %}
+        </div>
+      {% empty %}
         <p>No list yet!</p>
-      {% endif %}
+      {% endfor %}
       <br>
       {% if object_list.has_other_pages %}
         <ul class="pagination pagination-sm">

@@ -8,7 +8,7 @@ from django.shortcuts import render, redirect
 
 from .email import send_email
 from .filter import CodeFilter
-from .forms import ContactForm
+from .forms import ContactForm, CodeForm
 from .models import Services, Reference, Article, Category, Tag, Feature, Skill, Code, Process
 
 
@@ -181,7 +181,7 @@ def contact(request):
 
 def code_list(request):
     """
-
+    generates the list view with pagination and filtering
     """
     get_dict = request.POST.copy()
     if not get_dict:
@@ -213,6 +213,27 @@ def code_list(request):
 
     context = {**get_base_context(), **local_context}
     return render(request, template, context)
+
+
+def code_detail(request, pk):
+    """
+    view for specific item from Code
+    """
+    item = Code.objects.get(pk=pk)
+    if item:
+        if request.method == "POST":
+            pass
+        else:
+            template = 'code_detail.html'
+            local_context = {
+                'title': 'Update Code item',
+                'form': CodeForm(item),
+                'notice': 'edit or view the item',
+            }
+            context = {**get_base_context(), **local_context}
+            return render(request, template, context)
+    else:
+        return redirect('lcore:code_list')
 
 
 def test(request):
@@ -252,5 +273,21 @@ def experiments(request):
     tag_list = get_direct_query_dict(filter_query)
 
     #'tag_list': tag_list
-    return None    
+    return None
+
+
+def test_multi(request):
+    codelist = Code.objects.all().order_by('extract').prefetch_related('tags').all()
+    itemtags = codelist[2]  # .tags_set
+    tags = itemtags.tags
+    print(vars(itemtags))
+    template = 'code_list.html'
+    local_context = {
+        'object_list': codelist,
+        #'filter_form': code_filtered,
+        'notice': 'Some sort of notice',
+    }
+
+    context = {**get_base_context(), **local_context}
+    return render(request, template, context)
 

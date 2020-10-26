@@ -17,7 +17,8 @@ class ContactForm(forms.Form):
         fields = ['full_name', 'email', 'subject', 'content']
 
 
-class CodeForm(forms.Form):
+class CodeForm(forms.ModelForm):
     class Meta:
-        fields = ['__all__']
-        
+        model = Code
+        fields = '__all__'
+

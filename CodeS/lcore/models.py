@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 
 # ## Model Managers ## #
@@ -225,6 +226,9 @@ class Code(models.Model):
 
     def __str__(self):
         return self.extract.title()
+
+    # def get_absolute_url(self):
+    #     return reverse("detail", kwargs={"id": self.id})
 
 
 class Reference(models.Model):
