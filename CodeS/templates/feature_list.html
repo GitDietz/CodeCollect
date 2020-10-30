@@ -25,7 +25,7 @@
       </form>
   </div>
   <div class="col-lg-10" data-aos="fade-right">
-    <a href="{% url 'lcore:feature_detail' pk=0 %}"><i class="far fa-plus-square"></i></a>
+    <a href="{% url 'lcore:feature_new' %}"><i class="far fa-plus-square"></i></a>
   </div>
 </div>
 
@@ -34,7 +34,7 @@
       {% for item in object_list %}
         <div class="form-row">
           <div class="col-lg-7">
-            <a href="{% url 'lcore:feature_detail' pk=code.pk %}"><i class="far fa-edit"></i></a>
+            <a href="{% url 'lcore:feature_detail' pk=item.pk %}"><i class="far fa-edit"></i></a>
             {{ item.description }}
 
           </div>

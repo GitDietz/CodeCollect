@@ -24,6 +24,7 @@ class CodeForm(forms.ModelForm):
 
 
 class AppfeatureForm(forms.ModelForm):
+    last_test = forms.DateField(input_formats=['%d/%m/%Y'])
     class Meta:
         model = Appfeature
         fields = '__all__'

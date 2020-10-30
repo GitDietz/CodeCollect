@@ -342,8 +342,8 @@ class Appfeature(models.Model):
     """
     description = models.CharField(max_length=200, blank=False, unique=True)
     date_added = models.DateTimeField(auto_now=False, auto_now_add=True)
-    last_test = models.DateTimeField(auto_now=False, auto_now_add=False)
-    last_bug = models.CharField(max_length=200, blank=False, unique=False)
+    last_test = models.DateTimeField(auto_now=False, auto_now_add=False, blank=True)
+    last_bug = models.CharField(max_length=200, blank=True, unique=False)
     bug = models.BooleanField(default=False)
     objects = AppFeatureManager()
 

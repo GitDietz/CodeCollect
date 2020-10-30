@@ -342,6 +342,27 @@ def feature_detail(request, pk=None):
         return redirect('lcore:feature_list')
 
 
+def feature_new(request):
+    """
+    view for specific item from appFeatures
+    """
+    template = 'feature_detail.html'
+    form = AppfeatureForm(request.POST or None)
+    if request.method == "POST":
+        if form.is_valid():
+            item = form.save()
+            return redirect('lcore:feature_list')
+
+    local_context = {
+        'title': 'Create feature item',
+        'form': form,
+        'banner_heading': 'Feature detail',
+        'notice': 'edit or view the item',
+    }
+    context = {**get_base_context(), **local_context}
+    return render(request, template, context)
+
+
 def feature_list(request):
     """
     generates the list view with pagination and filtering

@@ -4,7 +4,10 @@
 {% block content %}
 {% load static %}
 <main id="main">
-<br><br>
+   <!-- Fengyuan Chen's Datepicker -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.css" integrity="sha256-b88RdwbRJEzRx95nCuuva+hO5ExvXXnpX+78h8DjyOE=" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.js" integrity="sha256-/7FLTdzP6CfC1VBAj/rsp3Rinuuu9leMRGd354hvk0k=" crossorigin="anonymous"></script>
+  <br>
 <!-- ======= Breadcrumbs ======= -->
 <section id="breadcrumbs" class="breadcrumbs">
   <div class="container">
@@ -12,7 +15,7 @@
       <h2>{{ banner_heading }}</h2>
       <ol>
         <li><a href="{% url 'lcore:home' %}">Home</a></li>
-        <li><a href="{% url 'lcore:feature_list' %}">Code List</a></li>
+        <li><a href="{% url 'lcore:feature_list' %}">Feature List</a></li>
       </ol>
     </div>
   </div>
@@ -32,7 +35,11 @@
 </div>
 </main><!-- End #main -->
 <script>
-
+ $(function () {
+    $("#id_last_test").datepicker({
+      format:'dd/mm/yyyy',
+    });
+  });
 </script>
 
 {% endblock content %}

@@ -6,7 +6,7 @@ from django.views import defaults as default_views
 
 from .views import (base, blog, home, pdf, services, about, show_pdf,
                     contact, code_list, test, test_multi, code_detail,
-                    feature_list, feature_detail)
+                    feature_list, feature_detail, feature_new)
 
 app_name = 'lcore'
 urlpatterns = [
@@ -18,6 +18,7 @@ urlpatterns = [
     path('contact', contact, name='contact'),
     path('blog', blog, name='blog'),
     re_path('feature/(?P<pk>\d+)', feature_detail, name='feature_detail'),
+    path('feature_new', feature_new, name='feature_new'),
     path('feature_list', feature_list, name='feature_list'),
     path('home', home, name='home'),
     path('pdf', pdf, name='pdf'),
