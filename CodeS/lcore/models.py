@@ -1,5 +1,7 @@
+from datetime import timedelta
 from django.db import models
 from django.urls import reverse
+from django.utils import timezone
 
 
 # ## Model Managers ## #
@@ -32,7 +34,7 @@ class CategoryManager(models.Manager):
         qs = super(CategoryManager, self).all()
         return qs
 
-    def active(self, group_id):
+    def active(self):
         qs = super(CategoryManager, self).filter(active=True)
         return qs
 
@@ -117,7 +119,27 @@ class ProcessManager(models.Manager):
         return qs
 
 
-# ## Models ## #
+# AppFeatureManager
+class AppFeatureManager(models.Manager):
+    def all(self):
+        qs = super(AppFeatureManager, self).all()
+        return qs
+
+    def bugs(self):
+        qs = super(AppFeatureManager, self).filter(bug=True)
+        return qs
+
+    def no_bugs(self):
+        qs = super(AppFeatureManager, self).filter(bug=False)
+        return qs
+
+    def old_test(self):
+        before_time = timezone.now() - timedelta(days=21)
+        qs = super(AppFeatureManager, self).filter(last_test__lte=before_time)
+        return qs
+
+
+# ####################### Models ###################### #
 class Author(models.Model):
     """
     The author identified for an article or code
@@ -312,3 +334,21 @@ class Skill(models.Model):
         return self.skill.title()
 
 
+# ####################### Application ###################### #
+class Appfeature(models.Model):
+    """
+    Contains the features of the particular application
+    This can be used for trcking and testing
+    """
+    description = models.CharField(max_length=200, blank=False, unique=True)
+    date_added = models.DateTimeField(auto_now=False, auto_now_add=True)
+    last_test = models.DateTimeField(auto_now=False, auto_now_add=False)
+    last_bug = models.CharField(max_length=200, blank=False, unique=False)
+    bug = models.BooleanField(default=False)
+    objects = AppFeatureManager()
+
+    class Meta:
+        ordering = ['bug', 'description']
+
+    def __str__(self):
+        return self.description.title()

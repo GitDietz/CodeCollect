@@ -4,7 +4,7 @@ from .base import env
 # GENERAL
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
-SECRET_KEY = env("DJANGO_SECRET_KEY", default="1el0bsuhrOlAEQMOJUIs7aT30mruBVy7C7kAXOkAUN6yhIKWFzoaFRys5lxuZnoX",)
+SECRET_KEY = env("DJANGO_SECRET_KEY", default=config('PRD_SK'),)
 # https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS", default=["asharpsystems.com", "127.0.0.1", "127.0.0.2"])
 
@@ -14,9 +14,9 @@ ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS", default=["asharpsystems.com", "
 DATABASES = {
     "default": {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'CodeCollect',
-        'USER': 'codemaster',
-        'PASSWORD': 'CodePass00',
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PW'),
         'HOST': '127.0.0.1',
         'PORT': '5432'
     }

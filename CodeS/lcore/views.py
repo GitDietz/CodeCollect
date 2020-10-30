@@ -1,4 +1,6 @@
+from decouple import config
 import pathlib
+
 from django.conf import settings as conf_settings
 from django.contrib import messages
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -7,9 +9,11 @@ from django.http import FileResponse
 from django.shortcuts import render, redirect
 
 from .email import send_email
-from .filter import CodeFilter
-from .forms import ContactForm, CodeForm
-from .models import Services, Reference, Article, Category, Tag, Feature, Skill, Code, Process
+from .filter import CodeFilter, FeatureFilter
+from .forms import ContactForm, CodeForm, AppfeatureForm
+from .models import Services, Reference, Article, Category, Tag, Feature, Skill, Code, Process, Appfeature
+
+no_per_page = config('PAGINATE')
 
 
 def get_base_context():
@@ -186,7 +190,6 @@ def code_list(request):
     get_dict = request.POST.copy()
     if not get_dict:
         get_dict = request.GET.copy()
-        print('GET method tested')
     try:
         del get_dict['page']
     except KeyError:
@@ -196,7 +199,7 @@ def code_list(request):
     code_filtered = CodeFilter(get_dict, queryset=codelist)
     code_qs = code_filtered.qs
     page = request.GET.get('page', 1)
-    paginator = Paginator(code_qs, 10)
+    paginator = Paginator(code_qs, no_per_page)
     try:
         code_page = paginator.page(page)
     except PageNotAnInteger:
@@ -215,23 +218,35 @@ def code_list(request):
     return render(request, template, context)
 
 
-def code_detail(request, pk):
+def code_detail(request, pk=None):
     """
     view for specific item from Code
     """
-    item = Code.objects.get(pk=pk)
-    if item:
+    if pk == '0' or pk is None:
+        # print(f'pk is {pk} in the first if')
+        item = None
+        new_item = True
+    else:
+        new_item = False
+        item = Code.objects.get(pk=pk)
+    template = 'code_detail.html'
+    if item or new_item:
         if request.method == "POST":
-            pass
+            form = CodeForm(request.POST or None, instance=item)
+            if form.is_valid():
+                item = form.save()
+                return redirect('lcore:code_list')
+        elif new_item:
+            form = CodeForm(None)
         else:
-            template = 'code_detail.html'
-            local_context = {
-                'title': 'Update Code item',
-                'form': CodeForm(item),
-                'notice': 'edit or view the item',
-            }
-            context = {**get_base_context(), **local_context}
-            return render(request, template, context)
+            form = CodeForm(instance=item or None)
+        local_context = {
+            'title': 'Update Code item',
+            'form': form,
+            'notice': 'edit or view the item',
+        }
+        context = {**get_base_context(), **local_context}
+        return render(request, template, context)
     else:
         return redirect('lcore:code_list')
 
@@ -291,3 +306,75 @@ def test_multi(request):
     context = {**get_base_context(), **local_context}
     return render(request, template, context)
 
+
+def feature_detail(request, pk=None):
+    """
+    view for specific item from appFeatures
+    """
+    item = None
+    new_item = False
+    if pk == '0' or pk is None:
+        new_item = True
+    else:
+        item = Appfeature.objects.get(pk=pk)
+    template = 'feature_detail.html'
+
+    if item or new_item:
+        if request.method == "POST":
+            form = AppfeatureForm(request.POST or None, instance=item)
+            if form.is_valid():
+                item = form.save()
+                return redirect('lcore:feature_list')
+        elif new_item:
+            form = AppfeatureForm(None)
+        else:
+            form = AppfeatureForm(instance=item or None)
+
+        local_context = {
+            'title': 'Update Feature item',
+            'form': form,
+            'banner_heading': 'Feature detail',
+            'notice': 'edit or view the item',
+        }
+        context = {**get_base_context(), **local_context}
+        return render(request, template, context)
+    else:
+        return redirect('lcore:feature_list')
+
+
+def feature_list(request):
+    """
+    generates the list view with pagination and filtering
+    """
+    get_dict = request.POST.copy()
+    if not get_dict:
+        get_dict = request.GET.copy()
+    try:
+        del get_dict['page']
+    except KeyError:
+        print('No page indicator on GET')
+
+    full_qs = Appfeature.objects.all() # look into the use of buttons to select different lists from manager
+
+    filtered = FeatureFilter(get_dict, queryset=full_qs)
+    filtered_qs = filtered.qs
+    page = request.GET.get('page', 1)
+    paginator = Paginator(filtered_qs, no_per_page)
+    try:
+        page_content = paginator.page(page)
+    except PageNotAnInteger:
+        page_content = paginator.page(1)
+    except EmptyPage:
+        page_content = paginator.page(paginator.num_pages)
+
+    template = 'feature_list.html'
+    local_context = {
+        'object_list': page_content,
+        'filter_form': filtered,
+        'filter_button': 'Filter on above',
+        'banner_heading': 'Application features & bugs',
+        'notice': 'Some sort of notice',
+    }
+
+    context = {**get_base_context(), **local_context}
+    return render(request, template, context)
