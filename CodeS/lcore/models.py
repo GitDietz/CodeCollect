@@ -342,7 +342,7 @@ class Appfeature(models.Model):
     """
     description = models.CharField(max_length=200, blank=False, unique=True)
     date_added = models.DateTimeField(auto_now=False, auto_now_add=True)
-    last_test = models.DateTimeField(auto_now=False, auto_now_add=False, blank=True)
+    last_test = models.DateTimeField(auto_now=False, auto_now_add=False, blank=True, null=True)
     last_bug = models.CharField(max_length=200, blank=True, unique=False)
     bug = models.BooleanField(default=False)
     objects = AppFeatureManager()
@@ -352,3 +352,8 @@ class Appfeature(models.Model):
 
     def __str__(self):
         return self.description.title()
+
+    def get_absolute_url(self):
+        return reverse("feature_detail", kwargs={"id": self.id})
+
+

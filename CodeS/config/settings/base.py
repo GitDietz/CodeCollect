@@ -83,6 +83,10 @@ DJANGO_APPS = [
     "django.contrib.staticfiles",
     # "django.contrib.humanize", # Handy template tags
     "django.contrib.admin",
+    # datepicker for testing
+    #'django_forms_bootstrap',
+    #'bootstrap4',
+    'bootstrap_datepicker_plus',
     "django.forms",
 ]
 THIRD_PARTY_APPS = [
