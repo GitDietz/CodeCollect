@@ -1,6 +1,5 @@
 from django import forms
 from django.core.exceptions import ValidationError
-# from bootstrap_datepicker_plus import DatePickerInput
 
 from .models import Code, Appfeature
 
@@ -29,9 +28,6 @@ class DateInput(forms.DateInput):
 
 
 class AppfeatureForm(forms.ModelForm):
-    # last_test = forms.DateField(widget=DatePickerInput(format='%d/%m/%Y'))
-    #last_test = forms.DateField(input_formats=['%d/%m/%Y'])
-    #last_test = forms.DateField(widget=DateInput)
     class Meta:
         model = Appfeature
         widgets = {'last_test': DateInput}

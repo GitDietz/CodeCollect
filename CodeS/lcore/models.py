@@ -351,7 +351,10 @@ class Appfeature(models.Model):
         ordering = ['bug', 'description']
 
     def __str__(self):
-        return self.description.title()
+        label = self.description.title()
+        if self.bug:
+            label += ' - bug'
+        return label
 
     def get_absolute_url(self):
         return reverse("feature_detail", kwargs={"id": self.id})
