@@ -229,7 +229,7 @@ class Process(models.Model):
 class Code(models.Model):
     """
     Code segment
-    setting project = True makes it a project description
+
     """
 
     author = models.ManyToManyField(Author, blank=False)
@@ -240,7 +240,7 @@ class Code(models.Model):
     visible = models.BooleanField(default=True)
     tags = models.ManyToManyField(Tag, blank=True)
     process = models.ManyToManyField(Process, blank=True)
-    article_file = models.FileField(upload_to='blog_article', blank=True, null=True)
+    article_file = models.FileField(upload_to='code_files', blank=True, null=True)
     objects = CodeManager()
 
     class Meta:
