@@ -232,6 +232,7 @@ def code_detail(request, pk=None):
     template = 'code_detail.html'
     if item or new_item:
         if request.method == "POST":
+            print(request)
             form = CodeForm(request.POST or None, instance=item)
             if form.is_valid():
                 item = form.save()
