@@ -99,6 +99,7 @@ THIRD_PARTY_APPS = [
 LOCAL_APPS = [
     "CodeS.users.apps.UsersConfig",
     'lcore',
+    'django_cleanup.apps.CleanupConfig', #keep this last in the list
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps

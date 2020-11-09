@@ -16,6 +16,7 @@ django-crispy-forms==1.9.2  # https://github.com/django-crispy-forms/django-cris
 django-redis==4.12.1  # https://github.com/jazzband/django-redis
 django-decouple==2.1
 django-bootstrap-datepicker-plus==3.0.5
+django-cleanup==5.1.0
 
 # Email api
 # ------------------------

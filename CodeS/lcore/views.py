@@ -3,6 +3,7 @@ import pathlib
 
 from django.conf import settings as conf_settings
 from django.contrib import messages
+from django.core.files.storage import FileSystemStorage
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db import connection
 from django.http import FileResponse
@@ -223,7 +224,6 @@ def code_detail(request, pk=None):
     view for specific item from Code
     """
     if pk == '0' or pk is None:
-        # print(f'pk is {pk} in the first if')
         item = None
         new_item = True
     else:
@@ -231,8 +231,8 @@ def code_detail(request, pk=None):
         item = Code.objects.get(pk=pk)
     template = 'code_detail.html'
     if item or new_item:
-        if request.method == "POST":
-            form = CodeForm(request.POST or None, instance=item)
+        if request.method == "POST" :
+            form = CodeForm(request.POST or None, request.FILES, instance=item)
             if form.is_valid():
                 item = form.save()
                 return redirect('lcore:code_list')

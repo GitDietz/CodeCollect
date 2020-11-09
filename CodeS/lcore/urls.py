@@ -26,3 +26,6 @@ urlpatterns = [
     # path('test_multi', test_multi, name='test_multi'),
     re_path('article/(?P<pk>\d+)', show_pdf, name='show_pdf'),
     ]
+
+if settings.DEBUG:
+    urlpatterns +=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
