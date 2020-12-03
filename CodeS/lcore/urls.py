@@ -4,9 +4,9 @@ from django.contrib import admin
 from django.urls import include, path, re_path
 from django.views import defaults as default_views
 
-from .views import (base, blog, home, pdf, services, about, show_pdf,
-                    contact, code_list, test, test_multi, code_detail,
-                    feature_list, feature_detail, feature_new)
+from .views import (about, base, blog, contact, code_detail, code_file, code_list,
+                    feature_list, feature_detail, feature_new, home, pdf, services,  show_pdf,
+                    test, test_multi)
 
 app_name = 'lcore'
 urlpatterns = [
@@ -14,6 +14,7 @@ urlpatterns = [
     path('base', base, name='base'),
     re_path('code/(?P<pk>\d+)', code_detail, name='code_detail'),
     path('code_list', code_list, name='code_list'),
+    re_path('code_file/(?P<pk>\d+)', code_file, name='code_file'),
     path('contact', contact, name='contact'),
     path('blog', blog, name='blog'),
     re_path('feature/(?P<pk>\d+)', feature_detail, name='feature_detail'),
@@ -29,3 +30,4 @@ urlpatterns = [
 
 if settings.DEBUG:
     urlpatterns +=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

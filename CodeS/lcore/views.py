@@ -1,4 +1,5 @@
 from decouple import config
+import mimetypes
 import pathlib
 
 from django.conf import settings as conf_settings
@@ -55,6 +56,7 @@ def get_direct_query_dict(sql_query):
     return out_qs
 
 
+# ############## GENERAL VIEWS ##################
 def base(request):
     template = "base.html"
     context = {}
@@ -251,6 +253,35 @@ def code_detail(request, pk=None):
         return redirect('lcore:code_list')
 
 
+def code_file(request, pk):
+    root = pathlib.Path(conf_settings.MEDIA_ROOT)
+    item = Code.objects.get(pk=pk)
+    c_file = item.article_file.path
+    #file_path = pathlib.Path.joinpath(root, c_file)
+    file_type = pathlib.Path(c_file).suffix
+    print(f'file type is {file_type}')
+    if file_type != 'pdf':
+        to_download = True
+    else:
+        to_download = False
+
+        # def download(request, path):
+        #     file_path = os.path.join(settings.MEDIA_ROOT, path)
+        #     if os.path.exists(file_path):
+        #         with open(file_path, 'rb') as fh:
+        #             response = HttpResponse(fh.read(), content_type="application/vnd.ms-excel")
+        #             response['Content-Disposition'] = 'inline; filename=' + os.path.basename(file_path)
+        #             return response
+        #     raise Http404
+
+    if c_file == '':
+        return redirect('lcore:code_detail pk=pk' )
+    file_path = pathlib.Path.joinpath(root, c_file)
+    print(f'{file_path}')
+    return FileResponse(open(file_path, 'rb'), as_attachment=to_download ,content_type='application/pdf')
+
+
+# ############## TEST items ##################
 def test(request):
     """
     just to test the build of a queryset
@@ -307,6 +338,7 @@ def test_multi(request):
     return render(request, template, context)
 
 
+# ############## FEATURE ##################
 def feature_detail(request, pk=None):
     """
     view for specific item from appFeatures

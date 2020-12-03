@@ -249,8 +249,11 @@ class Code(models.Model):
     def __str__(self):
         return self.extract.title()
 
-    # def get_absolute_url(self):
-    #     return reverse("detail", kwargs={"id": self.id})
+    def get_absolute_url(self):
+        return reverse("detail", kwargs={"id": self.id})
+
+    def file_url(self):
+        return reverse("code_file", kwargs={"id": self.id, "path": self.article_file})
 
 
 class Reference(models.Model):
