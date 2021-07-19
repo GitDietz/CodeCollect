@@ -1,13 +1,21 @@
+from decouple import config
+import mimetypes
 import pathlib
+
 from django.conf import settings as conf_settings
 from django.contrib import messages
+from django.core.files.storage import FileSystemStorage
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db import connection
 from django.http import FileResponse
 from django.shortcuts import render, redirect
 
 from .email import send_email
-from .forms import ContactForm
-from .models import Services, Reference, Article, Category, Tag, Feature, Skill
+from .filter import CodeFilter, FeatureFilter
+from .forms import ContactForm, CodeForm, AppfeatureForm
+from .models import Services, Reference, Article, Category, Tag, Feature, Skill, Code, Process, Appfeature
+
+no_per_page = config('PAGINATE')
 
 
 def get_base_context():
@@ -28,6 +36,27 @@ def get_base_context():
             }
 
 
+def get_direct_query_dict(sql_query):
+    """
+    build of a queryset by using a direct query for data set structures that are complex for the ORM
+    right now it only creates a dict
+    """
+    with connection.cursor() as cursor:
+        # sql = ("select C.id, C.extract, string_agg(T.tag, ',') as Tags from lcore_code as C left join "
+        #        "lcore_code_tags as CT on C.id = CT.code_id inner join lcore_tag as T on CT.tag_id = T.id "
+        #         "group by C.id order by C.id;")
+        # print(sql)
+        cursor.execute(sql_query)
+        columns = [col[0] for col in cursor.description]
+        out_qs = [
+            dict(zip(columns, row))
+            for row in cursor.fetchall()
+        ]
+    print(out_qs)
+    return out_qs
+
+
+# ############## GENERAL VIEWS ##################
 def base(request):
     template = "base.html"
     context = {}
@@ -154,3 +183,251 @@ def contact(request):
     }
     context = {**get_base_context(), **local_context}
     return render(request, template_name, context)
+
+########################## Code related #############################
+
+def code_list(request):
+    """
+    generates the list view with pagination and filtering
+    """
+    get_dict = request.POST.copy()
+    if not get_dict:
+        get_dict = request.GET.copy()
+    try:
+        del get_dict['page']
+    except KeyError:
+        print('No page indicator on GET')
+
+    codelist = Code.objects.all().order_by('extract').prefetch_related('tags').all()
+    code_filtered = CodeFilter(get_dict, queryset=codelist)
+    code_qs = code_filtered.qs
+    page = request.GET.get('page', 1)
+    paginator = Paginator(code_qs, no_per_page)
+    try:
+        code_page = paginator.page(page)
+    except PageNotAnInteger:
+        code_page = paginator.page(1)
+    except EmptyPage:
+        code_page = paginator.page(paginator.num_pages)
+
+    template = 'code_list.html'
+    local_context = {
+        'object_list': code_page,
+        'filter_form': code_filtered,
+        'notice': 'Some sort of notice',
+    }
+
+    context = {**get_base_context(), **local_context}
+    return render(request, template, context)
+
+
+def code_detail(request, pk=None):
+    """
+    view for specific item from Code
+    """
+    if pk == '0' or pk is None:
+        item = None
+        new_item = True
+    else:
+        new_item = False
+        item = Code.objects.get(pk=pk)
+    template = 'code_detail.html'
+    if item or new_item:
+        if request.method == "POST" :
+            form = CodeForm(request.POST or None, request.FILES, instance=item)
+            if form.is_valid():
+                item = form.save()
+                return redirect('lcore:code_list')
+        elif new_item:
+            form = CodeForm(None)
+        else:
+            form = CodeForm(instance=item or None)
+        local_context = {
+            'title': 'Update Code item',
+            'form': form,
+            'notice': 'edit or view the item',
+        }
+        context = {**get_base_context(), **local_context}
+        return render(request, template, context)
+    else:
+        return redirect('lcore:code_list')
+
+
+def code_file(request, pk):
+    root = pathlib.Path(conf_settings.MEDIA_ROOT)
+    item = Code.objects.get(pk=pk)
+    c_file = item.article_file.path
+    # file_path = pathlib.Path.joinpath(root, c_file)
+    file_type = pathlib.Path(c_file).suffix
+    print(f'file type is {file_type}')
+    if file_type != 'pdf':
+        to_download = True
+    else:
+        to_download = False
+
+        # def download(request, path):
+        #     file_path = os.path.join(settings.MEDIA_ROOT, path)
+        #     if os.path.exists(file_path):
+        #         with open(file_path, 'rb') as fh:
+        #             response = HttpResponse(fh.read(), content_type="application/vnd.ms-excel")
+        #             response['Content-Disposition'] = 'inline; filename=' + os.path.basename(file_path)
+        #             return response
+        #     raise Http404
+
+    if c_file == '':
+        return redirect('lcore:code_detail pk=pk' )
+    file_path = pathlib.Path.joinpath(root, c_file)
+    print(f'{file_path}')
+    return FileResponse(open(file_path, 'rb'), as_attachment=to_download ,content_type='application/pdf')
+
+
+# ############## TEST items ##################
+def test(request):
+    """
+    just to test the build of a queryset
+    """
+    # related_qs = Code.objects.all()
+
+    with connection.cursor() as cursor:
+        sql = ("select C.id, C.extract, string_agg(T.tag, ',') as Tags from lcore_code as C left join "
+               "lcore_code_tags as CT on C.id = CT.code_id inner join lcore_tag as T on CT.tag_id = T.id "
+                "group by C.id order by C.id;")
+        print(sql)
+        cursor.execute(sql)
+        columns = [col[0] for col in cursor.description]
+        related_qs = [
+            dict(zip(columns, row))
+            for row in cursor.fetchall()
+        ]
+    print(related_qs)
+    return redirect('lcore:code_list')
+
+
+def experiments(request):
+    sub_query = "select C.id, C.extract, string_agg(T.tag, ',') as Tags from lcore_code as C left join " \
+                "lcore_code_tags as CT on C.id = CT.code_id inner join lcore_tag as T on CT.tag_id = T.id " \
+                "group by C.id order by C.id;"
+    new_query = "select C.id, string_agg(T.tag, ',') as Tags from lcore_code as C left join " \
+                "lcore_code_tags as CT on C.id = CT.code_id inner join lcore_tag as T on CT.tag_id = T.id " \
+                "group by C.id order by C.id;"
+    # codelist = get_direct_query_dict()
+    # codelist = Code.objects.all().order_by('extract').extra(select={ 'TagList': new_query},) not working
+    # codelist = Code.objects.raw(sub_query) # yields the raw queryset type which does not work here
+    # codelist = Code.objects.all()
+    # code_ids = list(code_qs.values_list('id', flat=True))
+    # filter_query = new_query.replace("group","where C.id in (" + ",".join(map(str, code_ids)) + ") group")
+    # tag_list = get_direct_query_dict(filter_query)
+
+    #'tag_list': tag_list
+    return None
+
+
+def test_multi(request):
+    codelist = Code.objects.all().order_by('extract').prefetch_related('tags').all()
+    itemtags = codelist[2]  # .tags_set
+    tags = itemtags.tags
+    print(vars(itemtags))
+    template = 'code_list.html'
+    local_context = {
+        'object_list': codelist,
+        # 'filter_form': code_filtered,
+        'notice': 'Some sort of notice',
+    }
+
+    context = {**get_base_context(), **local_context}
+    return render(request, template, context)
+
+
+# ############## FEATURE ##################
+def feature_detail(request, pk=None):
+    """
+    view for specific item from appFeatures
+    """
+    item = None
+    new_item = False
+    if pk == '0' or pk is None:
+        new_item = True
+    else:
+        item = Appfeature.objects.get(pk=pk)
+    template = 'feature_detail.html'
+
+    if item or new_item:
+        if request.method == "POST":
+            form = AppfeatureForm(request.POST or None, instance=item)
+            if form.is_valid():
+                item = form.save()
+                return redirect('lcore:feature_list')
+        elif new_item:
+            form = AppfeatureForm(None)
+        else:
+            form = AppfeatureForm(instance=item or None)
+
+        local_context = {
+            'title': 'Update Feature item',
+            'form': form,
+            'banner_heading': 'Feature detail',
+            'notice': 'edit or view the item',
+        }
+        context = {**get_base_context(), **local_context}
+        return render(request, template, context)
+    else:
+        return redirect('lcore:feature_list')
+
+
+def feature_new(request):
+    """
+    view for specific item from appFeatures
+    """
+    template = 'feature_detail.html'
+    form = AppfeatureForm(request.POST or None)
+    if request.method == "POST":
+        if form.is_valid():
+            item = form.save()
+            return redirect('lcore:feature_list')
+
+    local_context = {
+        'title': 'Create feature item',
+        'form': form,
+        'banner_heading': 'Feature detail',
+        'notice': 'edit or view the item',
+    }
+    context = {**get_base_context(), **local_context}
+    return render(request, template, context)
+
+
+def feature_list(request):
+    """
+    generates the list view with pagination and filtering
+    """
+    get_dict = request.POST.copy()
+    if not get_dict:
+        get_dict = request.GET.copy()
+    try:
+        del get_dict['page']
+    except KeyError:
+        print('No page indicator on GET')
+
+    full_qs = Appfeature.objects.all() # look into the use of buttons to select different lists from manager
+
+    filtered = FeatureFilter(get_dict, queryset=full_qs)
+    filtered_qs = filtered.qs
+    page = request.GET.get('page', 1)
+    paginator = Paginator(filtered_qs, no_per_page)
+    try:
+        page_content = paginator.page(page)
+    except PageNotAnInteger:
+        page_content = paginator.page(1)
+    except EmptyPage:
+        page_content = paginator.page(paginator.num_pages)
+
+    template = 'feature_list.html'
+    local_context = {
+        'object_list': page_content,
+        'filter_form': filtered,
+        'filter_button': 'Filter on above',
+        'banner_heading': 'Application features & bugs',
+        'notice': 'Some sort of notice',
+    }
+
+    context = {**get_base_context(), **local_context}
+    return render(request, template, context)

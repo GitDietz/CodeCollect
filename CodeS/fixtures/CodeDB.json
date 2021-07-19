@@ -1,0 +1,2389 @@
+[
+  {
+    "model": "sessions.session",
+    "pk": "4pqipq05vjra0qqdttnfl22kwj0dbzwc",
+    "fields": {
+      "session_data": "NjYzNTMwNDIzMzYyZTYxZWNhNTJhZjhkMzFmMTgwZWVkZWYzMTVmYjp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI1NTk5NjMwZTA2YjVjMmZkY2E3MzgxODllYjJkMjRjMzk0ZjNlNjY4In0=",
+      "expire_date": "2020-09-28T21:05:18.470Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "91kp6nha15v57ydt37zx5l0qcl2flnci",
+    "fields": {
+      "session_data": "NjYzNTMwNDIzMzYyZTYxZWNhNTJhZjhkMzFmMTgwZWVkZWYzMTVmYjp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI1NTk5NjMwZTA2YjVjMmZkY2E3MzgxODllYjJkMjRjMzk0ZjNlNjY4In0=",
+      "expire_date": "2020-08-26T09:56:58.458Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "eya48w1auz3v9bke0a81xwuiqge0db4e",
+    "fields": {
+      "session_data": "NjYzNTMwNDIzMzYyZTYxZWNhNTJhZjhkMzFmMTgwZWVkZWYzMTVmYjp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI1NTk5NjMwZTA2YjVjMmZkY2E3MzgxODllYjJkMjRjMzk0ZjNlNjY4In0=",
+      "expire_date": "2020-08-24T10:38:37.062Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "pqaafcox09i6grs6q6xybg5a8xokz281",
+    "fields": {
+      "session_data": "NjYzNTMwNDIzMzYyZTYxZWNhNTJhZjhkMzFmMTgwZWVkZWYzMTVmYjp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI1NTk5NjMwZTA2YjVjMmZkY2E3MzgxODllYjJkMjRjMzk0ZjNlNjY4In0=",
+      "expire_date": "2020-09-27T04:53:06.553Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "q0kff1ndrt2er0d32bozn4zyk3volv7s",
+    "fields": {
+      "session_data": "NjYzNTMwNDIzMzYyZTYxZWNhNTJhZjhkMzFmMTgwZWVkZWYzMTVmYjp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI1NTk5NjMwZTA2YjVjMmZkY2E3MzgxODllYjJkMjRjMzk0ZjNlNjY4In0=",
+      "expire_date": "2020-10-13T21:05:34.941Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "vfzaxipv13fsd6vhujua6vq83pwz5m0b",
+    "fields": {
+      "session_data": "MWY2ZGU1YTgxZDAzYTM5ODkyM2RlNTJkMWEyMjliNDZmNmU2MDA1Mjp7Il9zZXNzaW9uX2V4cGlyeSI6MCwiX2F1dGhfdXNlcl9pZCI6IjEiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaGFzaCI6IjU1OTk2MzBlMDZiNWMyZmRjYTczODE4OWViMmQyNGMzOTRmM2U2NjgifQ==",
+      "expire_date": "2020-08-19T09:48:19.460Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "w0iel1blfyj1tsn362d9u6khja3ruuty",
+    "fields": {
+      "session_data": "NjYzNTMwNDIzMzYyZTYxZWNhNTJhZjhkMzFmMTgwZWVkZWYzMTVmYjp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI1NTk5NjMwZTA2YjVjMmZkY2E3MzgxODllYjJkMjRjMzk0ZjNlNjY4In0=",
+      "expire_date": "2020-10-26T10:20:20.863Z"
+    }
+  },
+  {
+    "model": "sites.site",
+    "pk": 1,
+    "fields": {
+      "domain": "suncorp.com.au",
+      "name": "Automation"
+    }
+  },
+  {
+    "model": "lcore.author",
+    "pk": 1,
+    "fields": {
+      "name": "Dieter Thierry",
+      "active": true
+    }
+  },
+  {
+    "model": "lcore.author",
+    "pk": 2,
+    "fields": {
+      "name": "Manas Mallick",
+      "active": true
+    }
+  },
+  {
+    "model": "lcore.tag",
+    "pk": 1,
+    "fields": {
+      "tag": "Outlook",
+      "active": true
+    }
+  },
+  {
+    "model": "lcore.tag",
+    "pk": 2,
+    "fields": {
+      "tag": "VBA",
+      "active": true
+    }
+  },
+  {
+    "model": "lcore.tag",
+    "pk": 3,
+    "fields": {
+      "tag": "Excel",
+      "active": true
+    }
+  },
+  {
+    "model": "lcore.tag",
+    "pk": 4,
+    "fields": {
+      "tag": "MS Access",
+      "active": true
+    }
+  },
+  {
+    "model": "lcore.tag",
+    "pk": 5,
+    "fields": {
+      "tag": "SQL",
+      "active": true
+    }
+  },
+  {
+    "model": "lcore.tag",
+    "pk": 6,
+    "fields": {
+      "tag": "Python",
+      "active": true
+    }
+  },
+  {
+    "model": "lcore.tag",
+    "pk": 7,
+    "fields": {
+      "tag": "Django",
+      "active": true
+    }
+  },
+  {
+    "model": "lcore.tag",
+    "pk": 8,
+    "fields": {
+      "tag": "Word",
+      "active": true
+    }
+  },
+  {
+    "model": "lcore.category",
+    "pk": 1,
+    "fields": {
+      "name": "Development",
+      "active": true
+    }
+  },
+  {
+    "model": "lcore.category",
+    "pk": 2,
+    "fields": {
+      "name": "UI",
+      "active": true
+    }
+  },
+  {
+    "model": "lcore.category",
+    "pk": 3,
+    "fields": {
+      "name": "Process analysis",
+      "active": true
+    }
+  },
+  {
+    "model": "lcore.article",
+    "pk": 1,
+    "fields": {
+      "author": "Getafix",
+      "caption": "Automate cleaning up your mailbox",
+      "extract": "Ever go faced with thousands of emails in your mailbox? And, worse of it, it contains so much junk!  Cleaning it up manually will just take forever. But, don't fear help is at hand with the hidden development tools in MS Outlook. Let's explore how we can do this....",
+      "story": "Ever go faced with thousands of emails in your mailbox?\r\nAnd, worse of it, it contains so much junk!\r\n\r\nCleaning it up manually will just take forever. But, don't fear help is at hand with the hidden development tools in MS Outlook. Let's explore how to do this...",
+      "date_added": "2020-08-07T09:41:25.165Z",
+      "draft": false,
+      "visible": true,
+      "image_file": "blog_image/carol-jeng-6O7EkAgC-3s-unsplash.jpg",
+      "article_file": "",
+      "project": false,
+      "tags": [
+        2,
+        6
+      ],
+      "category": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "lcore.article",
+    "pk": 2,
+    "fields": {
+      "author": "Getafix",
+      "caption": "What is in my mailbox?",
+      "extract": "Still have hundreds or thousands of emails in your mailbox but you really have no grip on where they come from and what to do with them.  So, let's get some information from it to understand what's there ...",
+      "story": "Still have hundreds or thousands of emails in your mailbox but you really have no grip on where they come from and what to do with them.\r\n\r\nSo, let's get some information from it to understand what's there.....",
+      "date_added": "2020-08-07T09:44:01.435Z",
+      "draft": false,
+      "visible": true,
+      "image_file": "blog_image/daria-nepriakhina-EvX8-J2ClMo-unsplash.jpg",
+      "article_file": "",
+      "project": false,
+      "tags": [
+        1
+      ],
+      "category": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "lcore.article",
+    "pk": 3,
+    "fields": {
+      "author": "Jimmy",
+      "caption": "Shall we go?",
+      "extract": "To go or not to go. That is the question...",
+      "story": "Stuff",
+      "date_added": "2020-08-11T09:32:42.385Z",
+      "draft": false,
+      "visible": true,
+      "image_file": "blog_image/annie-spratt-qyAka7W5uMY-unsplash.jpg",
+      "article_file": "",
+      "project": false,
+      "tags": [
+        5,
+        7
+      ],
+      "category": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "lcore.article",
+    "pk": 4,
+    "fields": {
+      "author": "Getafix",
+      "caption": "Order Management",
+      "extract": "Making the leap from paper based order management to a process managed entirely on Outlook",
+      "story": "Our client still had an entirely paper based process for order management. The process was:\r\nOrders received as email\r\nprinted out, email moved to year/month folder\r\nsorted by region\r\nplaced in trays\r\ncollected by order entry clerk\r\norder entered\r\npaper copy stamped and order number noted\r\npaper copy filed per customer",
+      "date_added": "2020-08-12T11:21:11.592Z",
+      "draft": false,
+      "visible": true,
+      "image_file": "blog_image/paperstack.jpg",
+      "article_file": "blog_article/Email_processing.pdf",
+      "project": true,
+      "tags": [
+        1,
+        2
+      ],
+      "category": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "lcore.article",
+    "pk": 5,
+    "fields": {
+      "author": "Zorro",
+      "caption": "Here comes another one",
+      "extract": "Short story",
+      "story": "Long story",
+      "date_added": "2020-08-17T10:12:06.419Z",
+      "draft": false,
+      "visible": true,
+      "image_file": "blog_image/Email_processing_KDni2Gt.pdf",
+      "article_file": "",
+      "project": false,
+      "tags": [
+        4
+      ],
+      "category": []
+    }
+  },
+  {
+    "model": "lcore.process",
+    "pk": 1,
+    "fields": {
+      "process": "Quote Emailer",
+      "description": "Transfer quote to standard template and sends as email",
+      "active": true
+    }
+  },
+  {
+    "model": "lcore.process",
+    "pk": 2,
+    "fields": {
+      "process": "Code Library",
+      "description": "App to store and find common code blocks",
+      "active": true
+    }
+  },
+  {
+    "model": "lcore.code",
+    "pk": 1,
+    "fields": {
+      "extract": "Insert lines(rows) into Excel sheet",
+      "code": "Sub AddlinesToSummary()\r\n\r\n' Insert Additional line to the Summary Sheet - for additional detail cost sheets\r\n' Created 25/5/09 by D Thierry\r\n' ShortCut = Ctlr+L\r\n' this macro inserts a blank line into the summary sheet above the currently active line\r\n' it then copied the formulas from the previous line to the nex line\r\n\r\n    Rows(ActiveCell.Row).Insert Shift:=xlDown, CopyOrigin:=xlFormatFromLeftOrAbove\r\n    tablewidth = Cells(4, Columns.Count).End(xlToLeft).Column\r\n    newrow = ActiveCell.Row\r\n    copyrow = newrow - 1\r\n    'uses row 4 as the totals row to determine width of the formulas to copy\r\n    Range(\"A\" & copyrow).Resize(1, tablewidth).Copy Destination:=Range(\"A\" & newrow).Resize(1, tablewidth)\r\n    Cells(newrow, 1).Value = \"\"\r\n    \r\nEnd Sub",
+      "date_added": "2020-09-14T21:17:40.935Z",
+      "draft": false,
+      "visible": true,
+      "article_file": "",
+      "author": [
+        1
+      ],
+      "tags": [
+        2,
+        3
+      ],
+      "process": []
+    }
+  },
+  {
+    "model": "lcore.code",
+    "pk": 2,
+    "fields": {
+      "extract": "Protect sheet",
+      "code": "Sub protectArchives()\r\n'\r\nDim sh As Worksheet\r\nFor Each sh In ActiveWorkbook.Worksheets\r\n    If Right(sh.Name, 7) = \"Archive\" Then\r\n    sh.Protect DrawingObjects:=True, Contents:=True, Scenarios:=True _\r\n        , AllowFormattingCells:=True, AllowFormattingRows:=True, AllowSorting:= _\r\n        True, AllowFiltering:=True, AllowUsingPivotTables:=True, Password:=\"GDP-PC\"\r\n    End If\r\nNext sh\r\nEnd Sub\r\n\r\nSub UnprotectArchives()\r\n'\r\nDim sh As Worksheet\r\nFor Each sh In ActiveWorkbook.Worksheets\r\n    If Right(sh.Name, 7) = \"Archive\" Then\r\n    sh.Unprotect Password:=\"GDP-PC\"\r\n    End If\r\nNext sh\r\nEnd Sub",
+      "date_added": "2020-09-14T21:22:23.871Z",
+      "draft": false,
+      "visible": true,
+      "article_file": "",
+      "author": [
+        1
+      ],
+      "tags": [
+        2,
+        3
+      ],
+      "process": []
+    }
+  },
+  {
+    "model": "lcore.code",
+    "pk": 3,
+    "fields": {
+      "extract": "Cashflow forecaster",
+      "code": "File taking expense table detailing expenses recurring or one-off.\r\nRecurring expenses/income (negative values) can be set for recurring periods and the number of times they repeat.\r\n\r\nThe sheet allows you to forecast out several years",
+      "date_added": "2020-09-14T21:35:19.033Z",
+      "draft": false,
+      "visible": true,
+      "article_file": "blog_article/Forecaster_RA.xlsm",
+      "author": [
+        1
+      ],
+      "tags": [
+        2,
+        3
+      ],
+      "process": []
+    }
+  },
+  {
+    "model": "lcore.code",
+    "pk": 4,
+    "fields": {
+      "extract": "Insert data from Excel to SQL",
+      "code": "Sub SendDataToDB()\r\n'Developed 11/15\r\n'Objective: Insert pricing data into database from excel\r\n'Status: Tested, not deployed\r\n'-----------------------------------------------------------------\r\nDim cn As Object, strFile As String, strSQL As String\r\n\r\nstrCon = \"Provider=Microsoft.ACE.OLEDB.12.0;User ID=Admin;Data Source=S:\\CARO\\Customer Service Dept\\Database\\Store\\SCReporting R0A.accdb\"\r\n''Late binding, so no reference is needed\r\nSet cn = CreateObject(\"ADODB.Connection\")\r\ncn.Open strCon\r\n'strSQL = \"INSERT INTO tblQuoteItemPricing ( QuoteID, ProductCode, [Desc], \" & _\r\n        \" Yield, Cost, Sell ) SELECT 50 AS Expr1, 'Test01' AS Expr2, \" & _\r\n        \"'Some New thing' AS Expr3, 33 AS Expr4, 22.5 AS Expr5, 35.85 AS Expr6;\"\r\nstrSQL = \"INSERT INTO tblQuoteItemPricing ( QuoteID, ProductCode, [Desc], \" & _\r\n        \" Yield, Cost, Sell ) VALUES (502, 'Test03', 'Another thing', 20, 20, 40 );\"\r\n\r\ncn.Execute strSQL\r\ncn.Close\r\nSet cn = Nothing\r\nEnd Sub",
+      "date_added": "2020-09-14T21:39:18.960Z",
+      "draft": false,
+      "visible": true,
+      "article_file": "",
+      "author": [
+        1
+      ],
+      "tags": [
+        2,
+        3,
+        5
+      ],
+      "process": []
+    }
+  },
+  {
+    "model": "lcore.code",
+    "pk": 5,
+    "fields": {
+      "extract": "Update connections",
+      "code": "Sub UpdateData()\r\n'\r\n' UpdateData Macro\r\n\r\n    ActiveWorkbook.Connections(\"Full QIR\").Refresh\r\n    ActiveWorkbook.Connections(\"InvoiceData\").Refresh\r\n    ActiveWorkbook.Connections(\"QIR Activities performance\").Refresh\r\n    ActiveWorkbook.Connections(\"QIR Performance\").Refresh\r\n    ActiveWorkbook.Connections(\"Open QIRs\").Refresh\r\n    ActiveWorkbook.Connections(\"Open QIR Assigned\").Refresh\r\nEnd Sub",
+      "date_added": "2020-09-14T21:40:02.950Z",
+      "draft": false,
+      "visible": true,
+      "article_file": "",
+      "author": [
+        1
+      ],
+      "tags": [
+        2,
+        3,
+        5
+      ],
+      "process": []
+    }
+  },
+  {
+    "model": "lcore.code",
+    "pk": 6,
+    "fields": {
+      "extract": "Get worksheet from codename",
+      "code": "'some routines need the sheet to be given as parameter but name can't be used\r\n'this function returns the object and not the name\r\n\r\nFunction GetWorksheetFromCodeName(wb As Workbook, CodeName As String) As Worksheet\r\n    Dim ws As Worksheet\r\n    For Each ws In wb.Worksheets\r\n        Debug.Print ws.Name, ws.CodeName\r\n        If StrComp(ws.CodeName, CodeName, vbTextCompare) = 0 Then\r\n            Set GetWorksheetFromCodeName = ws\r\n            Exit Function\r\n        End If\r\n    Next ws\r\nEnd Function",
+      "date_added": "2020-09-14T21:44:46.818Z",
+      "draft": true,
+      "visible": true,
+      "article_file": "",
+      "author": [
+        1
+      ],
+      "tags": [
+        3
+      ],
+      "process": []
+    }
+  },
+  {
+    "model": "lcore.code",
+    "pk": 7,
+    "fields": {
+      "extract": "function to extend string",
+      "code": "Function addOn(OldS As String, Adder As String, Opr As String) As String\r\nIf OldS = \"\" Then\r\n        addOn = Adder\r\n    Else\r\n        addOn = OldS & Opr & Adder\r\nEnd If\r\nEnd Function",
+      "date_added": "2020-09-14T21:45:42.303Z",
+      "draft": false,
+      "visible": true,
+      "article_file": "",
+      "author": [
+        1
+      ],
+      "tags": [
+        3
+      ],
+      "process": []
+    }
+  },
+  {
+    "model": "lcore.code",
+    "pk": 8,
+    "fields": {
+      "extract": "Determine the number of rows in a block in Excel",
+      "code": "Function RowsInBlock(sh As String, startRow As Long, col1 As Long, col2 As Long) As Long\r\n'startRow - is the starting point to test from \r\n'col1 and col2 used as boundaries for the test\r\n\r\nDim ws As Worksheet, maxR As Long, col As Long, lr As Long\r\nSet ws = GetWorksheetFromCodeName(ThisWorkbook, sh)\r\n\r\nFor col = col1 To col2\r\n   lr = ws.Cells(Rows.Count, col).End(xlUp).Row\r\n   If lr > maxR Then maxR = lr\r\nNext col\r\nIf maxR > startRow Then RowsInBlock = maxR - startRow Else RowsInBlock = 0\r\nEnd Function",
+      "date_added": "2020-09-14T21:48:59.614Z",
+      "draft": false,
+      "visible": true,
+      "article_file": "",
+      "author": [
+        1
+      ],
+      "tags": [
+        3
+      ],
+      "process": []
+    }
+  },
+  {
+    "model": "lcore.code",
+    "pk": 9,
+    "fields": {
+      "extract": "Is excel range empty?",
+      "code": "Function RangeIsEmpty(ByVal SourceRange As Range) As Boolean\r\n\r\n  RangeIsEmpty = (WorksheetFunction.CountA(SourceRange) = 0)\r\n  \r\nEnd Function",
+      "date_added": "2020-09-14T21:50:03.564Z",
+      "draft": false,
+      "visible": true,
+      "article_file": "",
+      "author": [
+        1
+      ],
+      "tags": [
+        2,
+        3
+      ],
+      "process": []
+    }
+  },
+  {
+    "model": "lcore.code",
+    "pk": 10,
+    "fields": {
+      "extract": "Interactive select of folder",
+      "code": "Function FolderPath(instruction As String) As String\r\nDim fldr As FileDialog\r\nDim vItem As String\r\n        Set fldr = Application.FileDialog(msoFileDialogFolderPicker)\r\n        With fldr\r\n            .Title = instruction\r\n            .AllowMultiSelect = False\r\n    If .Show <> -1 Then GoTo NextCode\r\n            vItem = .SelectedItems(1)\r\n        End With\r\nNextCode:\r\n        FolderPath = vItem\r\n        Set fldr = Nothing\r\nEnd Function",
+      "date_added": "2020-09-14T21:51:06.212Z",
+      "draft": false,
+      "visible": true,
+      "article_file": "",
+      "author": [
+        1
+      ],
+      "tags": [
+        2,
+        3
+      ],
+      "process": []
+    }
+  },
+  {
+    "model": "lcore.code",
+    "pk": 11,
+    "fields": {
+      "extract": "Interactive selection of file",
+      "code": "Function getFile() As String\r\nDim fileN As FileDialog, vItem As String, lngCount As Long\r\n\r\nSet fileN = Application.FileDialog(msoFileDialogOpen)\r\nWith fileN\r\n    .Title = \"Select file to include in email\"\r\n    .AllowMultiSelect = False\r\n    If .Show <> -1 Then GoTo NextCode\r\n    vItem = .SelectedItems(1)\r\nEnd With\r\n\r\nNextCode:\r\n   getFile = vItem\r\n   Set fileN = Nothing\r\n\r\nEnd Function",
+      "date_added": "2020-09-14T21:51:51.495Z",
+      "draft": false,
+      "visible": true,
+      "article_file": "",
+      "author": [
+        1
+      ],
+      "tags": [
+        2,
+        3
+      ],
+      "process": []
+    }
+  },
+  {
+    "model": "lcore.code",
+    "pk": 12,
+    "fields": {
+      "extract": "Create as PDF",
+      "code": "Sub MakePDF(whichSh As Worksheet, DraftName As String)\r\n' make this generic to call it for any sheet\r\nDim ChosenSh As Worksheet, myFile As Variant, strFile As String\r\nOn Error GoTo errHandler\r\nSet ChosenSh = whichSh\r\nstrFile = Range(\"saveFolder\") & \"\\\" & DraftName & \".pdf\"\r\nmyFile = Application.GetSaveAsFilename _\r\n    (InitialFileName:=strFile, _\r\n        FileFilter:=\"PDF Files (*.pdf), *.pdf\", _\r\n        Title:=\"Select Folder and FileName to save\")\r\nIf myFile <> \"False\" Then\r\n    ChosenSh.ExportAsFixedFormat _\r\n        Type:=xlTypePDF, _\r\n        fileName:=myFile, _\r\n        Quality:=xlQualityStandard, _\r\n        IncludeDocProperties:=True, _\r\n        IgnorePrintAreas:=False, _\r\n        OpenAfterPublish:=False\r\n    fileName = myFile\r\n    'MsgBox \"PDF file has been created.\"\r\nEnd If\r\nExitHandler:\r\n    Exit Sub\r\nerrHandler:\r\n    MsgBox \"Could not create PDF file\"\r\n    Resume ExitHandler\r\n\r\nEnd Sub",
+      "date_added": "2020-09-14T21:54:06.855Z",
+      "draft": false,
+      "visible": true,
+      "article_file": "",
+      "author": [
+        1
+      ],
+      "tags": [
+        2,
+        3
+      ],
+      "process": []
+    }
+  },
+  {
+    "model": "lcore.code",
+    "pk": 13,
+    "fields": {
+      "extract": "Send email with outlook from excel",
+      "code": "Sub eMail()\r\nDim SelectData As String\r\nDim whatsInIt As String, NoFields As Integer, NoRows As Integer, j As Integer, TimeOfDay As String\r\nDim itm As Variant, app As Object, em As String, att As String\r\nDim StdIntro As String, BodyPart As String, CNVal As String\r\n'===========variables for testing\r\natt = \"Z:\\Dropbox\\Foams\\Costing\\Automation\\That\u2019s me 6Maytest1.pdf\"\r\n\r\n'===========Normal code===========\r\nIf fileName = \"\" Then\r\n    'MsgBox (\"PDF file not found\") 'need code to select file\r\n    att = getFile\r\n    Else\r\n        att = fileName\r\nEnd If\r\n'If (CSng(Now()) - CSng(Date)) > 0.5 Then TimeOfDay = \"Afternoon\" Else TimeOfDay = \"Morning\"\r\n'StdIntro = \"Good \" & TimeOfDay & Chr(10) & Chr(13)\r\n\r\n'-----------set up the email---------------\r\nSet app = CreateObject(\"outlook.application\")\r\nSet itm = app.CreateItem(0)\r\n\r\nWith itm\r\n    .To = Range(\"customerEmail\")\r\n    .Subject = \"Quotation \"\r\n    em = \"Subject created\"\r\n    If att <> \"\" Then .attachments.Add (att)\r\n          \r\n    em = \"Attachment made\"\r\n    '.body = StdIntro & Range(\"ebody\")\r\n    em = \"Body created\"\r\n    .Display\r\n    '.Send\r\nEnd With\r\nExitHandler:\r\n    Set app = Nothing\r\n    Set itm = Nothing\r\n   \r\n    Exit Sub\r\nEHandler:\r\n    MsgBox \"Failed on \" & em\r\n    Resume ExitHandler\r\nEnd Sub",
+      "date_added": "2020-09-14T21:55:09.671Z",
+      "draft": false,
+      "visible": true,
+      "article_file": "",
+      "author": [
+        1
+      ],
+      "tags": [
+        1,
+        2,
+        3
+      ],
+      "process": []
+    }
+  },
+  {
+    "model": "lcore.code",
+    "pk": 14,
+    "fields": {
+      "extract": "Excel - is array allocated?",
+      "code": "Private Function IsArrayAllocated(Arr As Variant) As Boolean\r\n''''''''''''''''''''''''''''''''''''''''''''''''''''''''''\r\n' IsArrayAllocated\r\n' Returns True or False indicating if Arr is an allocated\r\n' array.\r\n''''''''''''''''''''''''''''''''''''''''''''''''''''''''''\r\n    On Error Resume Next\r\n    Dim V As Variant\r\n    IsArrayAllocated = True\r\n    V = Arr(LBound(Arr, 1))\r\n    If IsError(V) = True Then\r\n        IsArrayAllocated = False\r\n    End If\r\n    If (UBound(Arr, 1) < LBound(Arr, 1)) Then\r\n        IsArrayAllocated = False\r\n    End If\r\n    \r\nEnd Function",
+      "date_added": "2020-09-14T21:57:40.550Z",
+      "draft": false,
+      "visible": true,
+      "article_file": "",
+      "author": [
+        1
+      ],
+      "tags": [
+        2,
+        3
+      ],
+      "process": []
+    }
+  },
+  {
+    "model": "lcore.code",
+    "pk": 15,
+    "fields": {
+      "extract": "Does excel sheet exist?",
+      "code": "Private Function SheetExists(WSName As String, Optional wb As Workbook = Nothing) As Boolean\r\n''''''''''''''''''''''''''''''''''''''''''''''''''''''''\r\n' SheetExists\r\n' Returns True if worksheet named by WSName exists in\r\n' Workbook WB. If WB is omitted,\r\n' the ActiveWorkbook is used.\r\n''''''''''''''''''''''''''''''''''''''''''''''''''''''''\r\nOn Error Resume Next\r\nSheetExists = IsError(IIf(wb Is Nothing, ActiveWorkbook, wb).Worksheets(WSName)) = False\r\n\r\nEnd Function",
+      "date_added": "2020-09-14T21:58:23.938Z",
+      "draft": false,
+      "visible": true,
+      "article_file": "",
+      "author": [
+        1
+      ],
+      "tags": [
+        2,
+        3
+      ],
+      "process": []
+    }
+  },
+  {
+    "model": "lcore.code",
+    "pk": 16,
+    "fields": {
+      "extract": "Convert time value  to float",
+      "code": "Function ConvTime(TimeS As String) As Single\r\n\r\n'The function converts time entered in the format 2.17pm\r\n'into a floating number for use in date/time calculations\r\n\r\nDim am As Boolean, pm As Boolean, dot As Integer, ap As Integer, pmAdd As Integer\r\nDim amFound As Integer, pmFound As Integer, hStr As String, mStr As String\r\namFound = InStr(1, TimeS, \"am\", vbTextCompare)\r\npmFound = InStr(1, TimeS, \"pm\", vbTextCompare)\r\ndot = InStr(1, TimeS, \".\", vbTextCompare)\r\nIf amFound > 0 Then am = True: pmAdd = 0\r\nIf pmFound > 0 Then pm = True: pmAdd = 12\r\nOn Error GoTo EH\r\nIf dot = 0 And (am = True Or pm = True) Then\r\n    hStr = Left(TimeS, amFound + pmFound - 1)\r\n    ConvTime = (CInt(hStr) + pmAdd) / 23\r\n    If ConvTime >= 1 Then ConvTime = ConvTime - 1\r\n    Exit Function\r\nEnd If\r\nIf dot > 0 And (am = True Or pm = True) Then\r\n        hStr = Left(TimeS, dot - 1)\r\n        mStr = Mid(TimeS, dot + 1, 2)\r\n        ConvTime = (CInt(hStr) + pmAdd + CInt(mStr) / 60) / 24\r\n        If ConvTime >= 1 Then ConvTime = ConvTime - 1\r\n        Exit Function\r\n    Else\r\n        ConvTime = 0\r\n        Exit Function\r\nEnd If\r\n\r\nEH:\r\nConvTime = 0\r\n\r\nEnd Function",
+      "date_added": "2020-09-14T22:04:04.361Z",
+      "draft": false,
+      "visible": true,
+      "article_file": "",
+      "author": [
+        1
+      ],
+      "tags": [
+        3
+      ],
+      "process": []
+    }
+  },
+  {
+    "model": "lcore.code",
+    "pk": 17,
+    "fields": {
+      "extract": "Excel Clean numbers",
+      "code": "Function CleanNumbers(Inc As String) As String\r\n' cleans number strings of non numeric characters\r\n' can be used to convert phone numbers or others\r\nDim i As Integer, temp As String, Out As String\r\nIf Len(Inc) > 1 Then\r\n        For i = 1 To Len(Inc)\r\n            temp = Mid(Inc, i, 1)\r\n            If IsNumeric(temp) Then Out = Out & temp\r\n            Debug.Print Out\r\n        Next i\r\n        CleanNumbers = Out\r\n    Else\r\n        CleanNumbers = Inc\r\nEnd If\r\n\r\nEnd Function\r\nSub test_CN()\r\nDim res As String\r\nres = CleanNumbers(\"432 550 7948\")\r\nEnd Sub",
+      "date_added": "2020-09-14T22:05:44.939Z",
+      "draft": false,
+      "visible": true,
+      "article_file": "",
+      "author": [
+        1
+      ],
+      "tags": [
+        2,
+        3
+      ],
+      "process": []
+    }
+  },
+  {
+    "model": "lcore.code",
+    "pk": 18,
+    "fields": {
+      "extract": "Update pivot tables",
+      "code": "Sub UpdatePivots()\r\nDim pc As PivotCache\r\nApplication.EnableEvents = False\r\nFor Each pc In ThisWorkbook.PivotCaches\r\n    'Debug.Print pc.Index & \"-\" & pc.SourceData\r\n    'pc.BackgroundQuery = False\r\n    pc.Refresh\r\nNext pc\r\nApplication.EnableEvents = True\r\nEnd Sub",
+      "date_added": "2020-09-14T22:06:31.824Z",
+      "draft": false,
+      "visible": true,
+      "article_file": "",
+      "author": [
+        1
+      ],
+      "tags": [
+        2,
+        3
+      ],
+      "process": []
+    }
+  },
+  {
+    "model": "lcore.code",
+    "pk": 19,
+    "fields": {
+      "extract": "Excel to Word (early bind)",
+      "code": "Sub Openword_EarlyBind()\r\nDim wdApp As Word.Application, wdDoc As Document, CDoc As Document\r\nDim wRange As Word.Range\r\nDim i As Integer, fN As String\r\n'Z:\\Dropbox\\Foams\\Costing\r\nSet wdApp = New Word.Application\r\nSet wdDoc = wdApp.Documents.Open(ThisWorkbook.Path & \"\\\" & _\r\n\"CustTemplate RA.docx\")\r\nwdApp.Visible = True\r\n'Bookmarks = PriceTable, Customer, QTDate\r\n    \r\nSet wRange = wdDoc.Bookmarks(\"Customer\").Range\r\nwRange.Text = Range(\"Cust\").Value\r\n'wRange.Font.TextColor = Colr(i)\r\nwdDoc.Bookmarks.Add \"Customer\", wRange\r\nSet wRange = wdDoc.Bookmarks(\"QTDate\").Range\r\nwRange.Text = Format(Date, \"ddMmmYY\")\r\nwdDoc.Bookmarks.Add \"QTDate\", wRange\r\n\r\nSet wRange = wdDoc.Bookmarks(\"PriceTable\").Range\r\nRange(\"FullTable\").Copy\r\nwRange.PasteAndFormat wdTableInsertAsRows\r\n'wRange.Font.TextColor = Colr(i)\r\n'.wdDoc.Bookmarks.Add \"PriceTable\", wRange\r\n\r\nfN = ThisWorkbook.Path & \"\\\" & \" Acct 4 \" & Format(Date, \"DDMMYY\") & \".pdf\"\r\n\r\nactivedocument.ExportAsFixedFormat OutputFileName:=fN, _\r\n        ExportFormat:=wdExportFormatPDF, OpenAfterExport:=False, OptimizeFor:= _\r\n        wdExportOptimizeForPrint, Range:=wdExportAllDocument, From:=1, To:=1, _\r\n        Item:=wdExportDocumentContent, IncludeDocProps:=True, KeepIRM:=True, _\r\n        CreateBookmarks:=wdExportCreateNoBookmarks, DocStructureTags:=True, _\r\n        BitmapMissingFonts:=True, UseISO19005_1:=False\r\nactivedocument.Close SaveChanges:=False\r\nwdApp.Quit\r\nSet wdApp = Nothing\r\nSet wdDoc = Nothing\r\n\r\nEnd Sub",
+      "date_added": "2020-09-14T22:11:57.848Z",
+      "draft": false,
+      "visible": true,
+      "article_file": "",
+      "author": [
+        1
+      ],
+      "tags": [
+        2,
+        3
+      ],
+      "process": []
+    }
+  },
+  {
+    "model": "lcore.code",
+    "pk": 20,
+    "fields": {
+      "extract": "Excel to Word (late bind)",
+      "code": "Sub LateBindWord()\r\nDim wRange As Object, wdApp As Object, wdDoc As Object\r\nDim fN As String\r\nSet wdApp = CreateObject(\"word.application\")\r\nSet wdDoc = wdApp.Documents.Open(ThisWorkbook.Path & \"\\\" & _\r\n    \"CustTemplate RA.docx\")\r\nwdApp.Visible = True\r\n'---------------Set bookmark content--------------\r\nSet wRange = wdDoc.Bookmarks(\"Customer\").Range\r\nwRange.Text = Range(\"Cust\").Value & Chr(10) & Range(\"QTNo\").Value\r\nwdDoc.Bookmarks.Add \"Customer\", wRange\r\n\r\nSet wRange = wdDoc.Bookmarks(\"QTDate\").Range\r\nwRange.Text = Format(Date, \"ddMmmYY\")\r\nwdDoc.Bookmarks.Add \"QTDate\", wRange\r\n\r\nSet wRange = wdDoc.Bookmarks(\"PriceTable\").Range\r\nRange(\"FullTable\").Copy\r\nwRange.PasteAndFormat wdTableInsertAsRows\r\nfN = ThisWorkbook.Path & \"\\\" & \"Acct 5 \" & Format(Date, \"DDMMYY\") & \".pdf\"\r\n\r\nwdDoc.ExportAsFixedFormat OutputFileName:=fN, _\r\n        ExportFormat:=17, OpenAfterExport:=False, OptimizeFor:= _\r\n        0, Range:=0, From:=1, To:=1, _\r\n        Item:=0, IncludeDocProps:=True, KeepIRM:=True, _\r\n        CreateBookmarks:=0, DocStructureTags:=True, _\r\n        BitmapMissingFonts:=True, UseISO19005_1:=False\r\nwdDoc.Close SaveChanges:=False\r\nwdApp.Quit\r\nSet wdApp = Nothing\r\nSet wdDoc = Nothing\r\n\r\n\r\nEnd Sub",
+      "date_added": "2020-09-14T22:12:32.449Z",
+      "draft": false,
+      "visible": true,
+      "article_file": "",
+      "author": [
+        1
+      ],
+      "tags": [
+        2,
+        3
+      ],
+      "process": []
+    }
+  },
+  {
+    "model": "lcore.code",
+    "pk": 21,
+    "fields": {
+      "extract": "Call user form",
+      "code": "Public str_batch As String, str_verifier As String, str_provider As String, str_jobID As String\r\n\r\n\r\nSub CallForm()\r\n' test for intersection with the active field inside the table\r\nDim r As Long, c As Long, table_range As Range\r\n\r\nr = ActiveCell.Row\r\nc = ActiveCell.Column\r\nSet table_range = Range(\"tbl_feedback\")\r\nIf Intersect(ActiveCell, table_range) Is Nothing Then\r\n    MsgBox \"Select activecell in the table before calling the form\"\r\nElse\r\n    str_batch = Cells(r, 6)\r\n    str_verifier = Cells(r, 7)\r\n    str_provider = Cells(r, 5)\r\n    str_jobID = Cells(r, 1)\r\n    Feedback.Show\r\nEnd If\r\n\r\nDebug.Print table_range.Address\r\nEnd Sub\r\n\r\nPrivate Sub UserForm_Activate()\r\nMe.txtBatch = str_batch\r\nMe.txtVerifier = str_verifier\r\nMe.txtProvider = str_provider\r\nMe.txtJob = str_jobID\r\nEnd Sub",
+      "date_added": "2020-09-28T08:43:54.040Z",
+      "draft": false,
+      "visible": true,
+      "article_file": "",
+      "author": [
+        1
+      ],
+      "tags": [
+        2,
+        3
+      ],
+      "process": []
+    }
+  },
+  {
+    "model": "lcore.code",
+    "pk": 22,
+    "fields": {
+      "extract": "Add data row to Excel table bottom",
+      "code": "Private Sub btnSubmit_Click()\r\nDim output(1 To 7) As Variant, tbl As ListObject, ws As Worksheet, new_row As ListRow\r\nIf Me.txtFBVerifier <> \"\" Or Me.textFBVendor <> \"\" Then\r\n    output(1) = Now()\r\n    output(3) = Me.txtProvider\r\n    output(4) = Me.txtBatch\r\n    output(5) = Me.txtVerifier\r\n    output(6) = Me.textFBVendor\r\n    output(7) = Me.txtFBVerifier\r\n    output(2) = Me.txtJob\r\n    Set ws = Sheets(\"FeedbackRecords\")\r\n    Set tbl = ws.ListObjects(\"tbl_Output\")\r\n    Set new_row = tbl.ListRows.Add\r\n    For i = 1 To 7\r\n    \r\n        new_row.Range(i) = output(i)\r\n    Next i\r\n    Unload Me\r\nEnd If\r\n\r\nEnd Sub",
+      "date_added": "2020-09-28T08:45:00.141Z",
+      "draft": false,
+      "visible": true,
+      "article_file": "",
+      "author": [
+        1
+      ],
+      "tags": [
+        2,
+        3
+      ],
+      "process": []
+    }
+  },
+  {
+    "model": "lcore.code",
+    "pk": 23,
+    "fields": {
+      "extract": "Common context for multiple views",
+      "code": "# when you need the same context in multiple views\r\ndef get_base_context():\r\n    service_list = Services.objects.top_five()\r\n    company = Reference.objects.get(primary=1)\r\n    co_name = company.company\r\n    co_addr = company.address\r\n    co_country = company.country\r\n    co_phone = company.phone\r\n    co_email = company.email\r\n    print(co_name)\r\n    return {'service_list': service_list,\r\n            'co_name': co_name,\r\n            'co_addr': co_addr,\r\n            'co_country': co_country,\r\n            'co_phone': co_phone,\r\n            'co_email': co_email,\r\n            }",
+      "date_added": "2020-10-04T03:09:22.356Z",
+      "draft": false,
+      "visible": true,
+      "article_file": "",
+      "author": [
+        1
+      ],
+      "tags": [
+        6
+      ],
+      "process": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "lcore.code",
+    "pk": 24,
+    "fields": {
+      "extract": "Combine Dictionary - Context",
+      "code": "# combine more than one context dict for a view\r\nlocal_context = {\r\n        'articles': active_articles,\r\n        'recent_articles': recent_articles,\r\n        'active_tags': active_tags,\r\n        'category_count': category_count\r\n    }\r\n\r\n    context = {**get_base_context(), **local_context}",
+      "date_added": "2020-10-04T03:10:38.623Z",
+      "draft": false,
+      "visible": true,
+      "article_file": "",
+      "author": [
+        1
+      ],
+      "tags": [
+        7
+      ],
+      "process": []
+    }
+  },
+  {
+    "model": "lcore.code",
+    "pk": 25,
+    "fields": {
+      "extract": "Django direct query",
+      "code": "from django.db import connection\r\n\r\n with connection.cursor() as cursor:\r\n        sql = (\"Select C.name, count(C.name) as cat_count from lcore_article_category as JJ inner join\"\r\n               \" lcore_category C on JJ.category_id = C.id group by name;\")\r\n       #  print(sql)\r\n        cursor.execute(sql)\r\n        columns = [col[0] for col in cursor.description]\r\n        category_count = [\r\n            dict(zip(columns, row))\r\n            for row in cursor.fetchall()\r\n        ]\r\n\r\n# pass category_count to the view",
+      "date_added": "2020-10-04T03:17:06.754Z",
+      "draft": false,
+      "visible": true,
+      "article_file": "",
+      "author": [
+        1
+      ],
+      "tags": [
+        7
+      ],
+      "process": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "lcore.reference",
+    "pk": 1,
+    "fields": {
+      "company": "Suncorp Group Automation",
+      "address": "Brisbane, Queensland",
+      "country": "Australia",
+      "phone": "073233222",
+      "email": "groupautomation@suncorp.com.au",
+      "primary": 1
+    }
+  },
+  {
+    "model": "lcore.services",
+    "pk": 1,
+    "fields": {
+      "service": "Web Development",
+      "date_added": "2020-08-07T06:21:41.588Z",
+      "priority": 1,
+      "image_file": "service_icon/build-website.jpg",
+      "descrip": "From internal websites, External ones to engage your customers to more complex database backed sites"
+    }
+  },
+  {
+    "model": "lcore.services",
+    "pk": 2,
+    "fields": {
+      "service": "Python Development",
+      "date_added": "2020-08-07T06:22:04.122Z",
+      "priority": 3,
+      "image_file": "service_icon/Python-Logo.jpg",
+      "descrip": "Scripts to perform variety of functions - reading files, moving them, downloads. So many possibilities"
+    }
+  },
+  {
+    "model": "lcore.services",
+    "pk": 3,
+    "fields": {
+      "service": "MS Access databases",
+      "date_added": "2020-08-07T06:22:44.300Z",
+      "priority": 2,
+      "image_file": "service_icon/MSAccess.png",
+      "descrip": "Small to large database applications to rapidly provide systems for internal users"
+    }
+  },
+  {
+    "model": "lcore.services",
+    "pk": 4,
+    "fields": {
+      "service": "Automation Excel VBA",
+      "date_added": "2020-08-07T06:23:44.908Z",
+      "priority": 4,
+      "image_file": "service_icon/excel.png",
+      "descrip": "Fetching data from other files or applications, formatting sheets, performing complex calculations, creating outputs, automating interactions with other applications e.g. emails"
+    }
+  },
+  {
+    "model": "lcore.services",
+    "pk": 5,
+    "fields": {
+      "service": "SQL (SQL Server, Postgres)",
+      "date_added": "2020-08-07T06:46:32.758Z",
+      "priority": 5,
+      "image_file": "service_icon/sql.jpg",
+      "descrip": "Structured storage of your data to apply strong  rules for keeping your data organised and accessible. A step up from using files to store data that should be consistently stored"
+    }
+  },
+  {
+    "model": "lcore.services",
+    "pk": 6,
+    "fields": {
+      "service": "Automation in MS Outlook",
+      "date_added": "2020-08-07T06:46:54.782Z",
+      "priority": 6,
+      "image_file": "service_icon/outlook.png",
+      "descrip": "Taking action on your mailbox, modifying emails, moving them between folders and mailboxes, generating other emails."
+    }
+  },
+  {
+    "model": "lcore.customer",
+    "pk": 1,
+    "fields": {
+      "name": "Motor Property Specialty Claims",
+      "sector": "Claims",
+      "date_added": "2020-08-14T06:55:57.880Z",
+      "image_file": "",
+      "descrip": "Claimf for motor and property",
+      "active": true
+    }
+  },
+  {
+    "model": "lcore.customer",
+    "pk": 2,
+    "fields": {
+      "name": "Worker's Compensation",
+      "sector": "Person Insurance",
+      "date_added": "2020-08-14T06:57:28.744Z",
+      "image_file": "",
+      "descrip": null,
+      "active": true
+    }
+  },
+  {
+    "model": "lcore.feature",
+    "pk": 1,
+    "fields": {
+      "feature": "Structured Data",
+      "image_file": "",
+      "descrip": null,
+      "active": true
+    }
+  },
+  {
+    "model": "lcore.feature",
+    "pk": 2,
+    "fields": {
+      "feature": "Consistent Processes",
+      "image_file": "",
+      "descrip": null,
+      "active": true
+    }
+  },
+  {
+    "model": "lcore.feature",
+    "pk": 3,
+    "fields": {
+      "feature": "Reduced Manual handling",
+      "image_file": "",
+      "descrip": null,
+      "active": true
+    }
+  },
+  {
+    "model": "lcore.feature",
+    "pk": 4,
+    "fields": {
+      "feature": "Greater accuracy",
+      "image_file": "",
+      "descrip": null,
+      "active": true
+    }
+  },
+  {
+    "model": "lcore.feature",
+    "pk": 5,
+    "fields": {
+      "feature": "Easier reporting",
+      "image_file": "",
+      "descrip": null,
+      "active": true
+    }
+  },
+  {
+    "model": "lcore.feature",
+    "pk": 6,
+    "fields": {
+      "feature": "Multi dimensional",
+      "image_file": "",
+      "descrip": null,
+      "active": true
+    }
+  },
+  {
+    "model": "lcore.feature",
+    "pk": 7,
+    "fields": {
+      "feature": "Auditable",
+      "image_file": "",
+      "descrip": null,
+      "active": true
+    }
+  },
+  {
+    "model": "lcore.skill",
+    "pk": 1,
+    "fields": {
+      "skill": "Process Analysis",
+      "descrip": null,
+      "active": true
+    }
+  },
+  {
+    "model": "lcore.skill",
+    "pk": 2,
+    "fields": {
+      "skill": "Process Design",
+      "descrip": null,
+      "active": true
+    }
+  },
+  {
+    "model": "lcore.skill",
+    "pk": 3,
+    "fields": {
+      "skill": "Database Design",
+      "descrip": null,
+      "active": true
+    }
+  },
+  {
+    "model": "lcore.skill",
+    "pk": 4,
+    "fields": {
+      "skill": "Database Development",
+      "descrip": null,
+      "active": true
+    }
+  },
+  {
+    "model": "lcore.skill",
+    "pk": 5,
+    "fields": {
+      "skill": "Web Development",
+      "descrip": null,
+      "active": true
+    }
+  },
+  {
+    "model": "lcore.skill",
+    "pk": 6,
+    "fields": {
+      "skill": "Automation Design",
+      "descrip": null,
+      "active": true
+    }
+  },
+  {
+    "model": "lcore.skill",
+    "pk": 7,
+    "fields": {
+      "skill": "Project Management",
+      "descrip": null,
+      "active": true
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "password": "argon2$argon2i$v=19$m=512,t=2,p=2$V2tHa203VVpYQ3Bt$tkOxaOvk5r/Lk+o7cg3poQ",
+      "last_login": "2020-10-12T10:20:20.806Z",
+      "is_superuser": true,
+      "username": "SuperAdmin",
+      "first_name": "",
+      "last_name": "",
+      "email": "thierrydna@me.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2020-08-05T09:35:30.751Z",
+      "name": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "account.emailaddress",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "email": "thierrydna@me.com",
+      "verified": true,
+      "primary": true
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2020-08-07T06:21:41.605Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "1",
+      "object_repr": "Web Development",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2020-08-07T06:22:04.139Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "2",
+      "object_repr": "Python Development",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2020-08-07T06:22:44.317Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "3",
+      "object_repr": "Ms Access Databases",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2020-08-07T06:23:44.977Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "4",
+      "object_repr": "Automation Excel Vba",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2020-08-07T06:46:32.775Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "5",
+      "object_repr": "Sql (Sql Server, Postgres)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2020-08-07T06:46:54.799Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "6",
+      "object_repr": "Automation In Ms Outlook",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2020-08-07T07:11:09.966Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "1",
+      "object_repr": "A Sharp Systems & Consulting",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2020-08-07T09:41:25.185Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "1",
+      "object_repr": "Automate Cleaning Up Your Mailbox",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+      "action_time": "2020-08-07T09:44:01.454Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "2",
+      "object_repr": "What Is In My Mailbox?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+      "action_time": "2020-08-07T09:57:03.492Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "2",
+      "object_repr": "What Is In My Mailbox?",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Extract\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+      "action_time": "2020-08-07T09:57:18.330Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "1",
+      "object_repr": "Automate Cleaning Up Your Mailbox",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Extract\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+      "action_time": "2020-08-07T09:57:45.303Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "2",
+      "object_repr": "What Is In My Mailbox?",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+      "action_time": "2020-08-10T10:39:05.211Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "2",
+      "object_repr": "What Is In My Mailbox?",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Extract\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+      "action_time": "2020-08-10T10:39:54.743Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "1",
+      "object_repr": "Automate Cleaning Up Your Mailbox",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Extract\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+      "action_time": "2020-08-10T10:50:00.501Z",
+      "user": 1,
+      "content_type": 17,
+      "object_id": "1",
+      "object_repr": "Outlook",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+      "action_time": "2020-08-10T10:50:05.392Z",
+      "user": 1,
+      "content_type": 17,
+      "object_id": "2",
+      "object_repr": "Vba",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+      "action_time": "2020-08-10T10:50:10.830Z",
+      "user": 1,
+      "content_type": 17,
+      "object_id": "3",
+      "object_repr": "Excel",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+      "action_time": "2020-08-10T10:50:19.526Z",
+      "user": 1,
+      "content_type": 17,
+      "object_id": "4",
+      "object_repr": "Ms Access",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+      "action_time": "2020-08-10T10:50:24.044Z",
+      "user": 1,
+      "content_type": 17,
+      "object_id": "5",
+      "object_repr": "Sql",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+      "action_time": "2020-08-10T10:50:29.280Z",
+      "user": 1,
+      "content_type": 17,
+      "object_id": "6",
+      "object_repr": "Python",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+      "action_time": "2020-08-10T10:50:34.206Z",
+      "user": 1,
+      "content_type": 17,
+      "object_id": "7",
+      "object_repr": "Django",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+      "action_time": "2020-08-10T10:51:30.330Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "1",
+      "object_repr": "Development",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+      "action_time": "2020-08-10T10:51:55.195Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "2",
+      "object_repr": "Ui",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+      "action_time": "2020-08-10T10:58:06.133Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "2",
+      "object_repr": "What Is In My Mailbox?",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Tags\", \"Category\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+      "action_time": "2020-08-11T08:50:13.927Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "2",
+      "object_repr": "What Is In My Mailbox?",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+      "action_time": "2020-08-11T09:32:42.479Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "3",
+      "object_repr": "Shall We Go?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+      "action_time": "2020-08-11T09:33:00.463Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "1",
+      "object_repr": "Automate Cleaning Up Your Mailbox",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Tags\", \"Category\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+      "action_time": "2020-08-11T10:36:37.645Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "3",
+      "object_repr": "Shall We Go?",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Draft\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+      "action_time": "2020-08-11T11:05:18.564Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "2",
+      "object_repr": "What Is In My Mailbox?",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Image file\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+      "action_time": "2020-08-11T11:08:01.720Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "1",
+      "object_repr": "Automate Cleaning Up Your Mailbox",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Image file\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+      "action_time": "2020-08-11T11:08:53.105Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "3",
+      "object_repr": "Shall We Go?",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Image file\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+      "action_time": "2020-08-12T10:01:18.307Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "1",
+      "object_repr": "Web Development",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Image file\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+      "action_time": "2020-08-12T10:04:50.633Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "3",
+      "object_repr": "Ms Access Databases",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Image file\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+      "action_time": "2020-08-12T10:05:03.477Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "2",
+      "object_repr": "Python Development",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Image file\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+      "action_time": "2020-08-12T10:05:15.146Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "4",
+      "object_repr": "Automation Excel Vba",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Image file\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+      "action_time": "2020-08-12T10:05:25.156Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "5",
+      "object_repr": "Sql (Sql Server, Postgres)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Image file\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+      "action_time": "2020-08-12T10:05:34.074Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "6",
+      "object_repr": "Automation In Ms Outlook",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Image file\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+      "action_time": "2020-08-12T10:32:38.659Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "1",
+      "object_repr": "Web Development",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Descrip\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+      "action_time": "2020-08-12T10:33:32.861Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "3",
+      "object_repr": "Ms Access Databases",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Descrip\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+      "action_time": "2020-08-12T10:35:56.043Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "2",
+      "object_repr": "Python Development",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Descrip\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+      "action_time": "2020-08-12T10:37:16.426Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "4",
+      "object_repr": "Automation Excel Vba",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Descrip\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+      "action_time": "2020-08-12T10:39:14.165Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "5",
+      "object_repr": "Sql (Sql Server, Postgres)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Descrip\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+      "action_time": "2020-08-12T10:40:15.785Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "6",
+      "object_repr": "Automation In Ms Outlook",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Descrip\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+      "action_time": "2020-08-12T11:21:11.701Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "4",
+      "object_repr": "Order Management",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+      "action_time": "2020-08-14T06:46:23.691Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "4",
+      "object_repr": "Order Management",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Story\", \"Draft\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+      "action_time": "2020-08-14T06:55:57.899Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "1",
+      "object_repr": "Dunlop Foams",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+      "action_time": "2020-08-14T06:57:28.762Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "2",
+      "object_repr": "Gd Pipelines",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+      "action_time": "2020-08-14T07:19:58.213Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "4",
+      "object_repr": "Order Management",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Image file\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+      "action_time": "2020-08-17T10:12:06.501Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "5",
+      "object_repr": "Here Comes Another One",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+      "action_time": "2020-08-17T10:12:39.989Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "5",
+      "object_repr": "Here Comes Another One",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Image file\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+      "action_time": "2020-08-17T10:23:54.003Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "4",
+      "object_repr": "Order Management",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Image file\", \"Article file\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+      "action_time": "2020-08-18T10:05:40.327Z",
+      "user": 1,
+      "content_type": 19,
+      "object_id": "1",
+      "object_repr": "Structured Data",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+      "action_time": "2020-08-18T10:05:52.099Z",
+      "user": 1,
+      "content_type": 19,
+      "object_id": "2",
+      "object_repr": "Consistent Processes",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+      "action_time": "2020-08-18T10:06:20.347Z",
+      "user": 1,
+      "content_type": 19,
+      "object_id": "3",
+      "object_repr": "Reduced Manual Handling",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+      "action_time": "2020-08-18T10:06:28.210Z",
+      "user": 1,
+      "content_type": 19,
+      "object_id": "4",
+      "object_repr": "Greater Accuracy",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+      "action_time": "2020-08-18T10:07:24.424Z",
+      "user": 1,
+      "content_type": 19,
+      "object_id": "5",
+      "object_repr": "Easier Reporting",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 57,
+    "fields": {
+      "action_time": "2020-08-18T10:07:41.719Z",
+      "user": 1,
+      "content_type": 19,
+      "object_id": "6",
+      "object_repr": "Multi Dimensional",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 58,
+    "fields": {
+      "action_time": "2020-08-18T10:08:03.195Z",
+      "user": 1,
+      "content_type": 19,
+      "object_id": "7",
+      "object_repr": "Auditable",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 59,
+    "fields": {
+      "action_time": "2020-08-18T11:05:39.824Z",
+      "user": 1,
+      "content_type": 20,
+      "object_id": "1",
+      "object_repr": "Process Analysis",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 60,
+    "fields": {
+      "action_time": "2020-08-18T11:05:50.226Z",
+      "user": 1,
+      "content_type": 20,
+      "object_id": "2",
+      "object_repr": "Process Design",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 61,
+    "fields": {
+      "action_time": "2020-08-18T11:06:01.847Z",
+      "user": 1,
+      "content_type": 20,
+      "object_id": "3",
+      "object_repr": "Database Design",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 62,
+    "fields": {
+      "action_time": "2020-08-18T11:06:11.705Z",
+      "user": 1,
+      "content_type": 20,
+      "object_id": "4",
+      "object_repr": "Database Development",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 63,
+    "fields": {
+      "action_time": "2020-08-18T11:06:32.418Z",
+      "user": 1,
+      "content_type": 20,
+      "object_id": "5",
+      "object_repr": "Web Development",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 64,
+    "fields": {
+      "action_time": "2020-08-18T11:06:46.540Z",
+      "user": 1,
+      "content_type": 20,
+      "object_id": "6",
+      "object_repr": "Automation Design",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 65,
+    "fields": {
+      "action_time": "2020-08-18T11:06:53.541Z",
+      "user": 1,
+      "content_type": 20,
+      "object_id": "7",
+      "object_repr": "Project Management",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 66,
+    "fields": {
+      "action_time": "2020-09-13T04:57:30.997Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "3",
+      "object_repr": "Process Analysis",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 67,
+    "fields": {
+      "action_time": "2020-09-13T04:58:34.340Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "1",
+      "object_repr": "Suncorp Group Automation",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Company\", \"Phone\", \"Email\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 68,
+    "fields": {
+      "action_time": "2020-09-13T04:59:17.985Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "1",
+      "object_repr": "Motor Property Specialty Claims",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Sector\", \"Descrip\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 69,
+    "fields": {
+      "action_time": "2020-09-13T04:59:44.376Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "2",
+      "object_repr": "Worker'S Compensation",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Sector\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 70,
+    "fields": {
+      "action_time": "2020-09-13T05:33:37.318Z",
+      "user": 1,
+      "content_type": 5,
+      "object_id": "1",
+      "object_repr": "suncorp.com.au",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Domain name\", \"Display name\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 71,
+    "fields": {
+      "action_time": "2020-09-13T05:35:16.691Z",
+      "user": 1,
+      "content_type": 22,
+      "object_id": "1",
+      "object_repr": "Dieter Thierry",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 72,
+    "fields": {
+      "action_time": "2020-09-13T05:35:27.859Z",
+      "user": 1,
+      "content_type": 22,
+      "object_id": "2",
+      "object_repr": "Manas Mallick",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 73,
+    "fields": {
+      "action_time": "2020-09-14T21:17:41.040Z",
+      "user": 1,
+      "content_type": 21,
+      "object_id": "1",
+      "object_repr": "Insert Lines(Rows) Into Excel Sheet",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 74,
+    "fields": {
+      "action_time": "2020-09-14T21:22:23.956Z",
+      "user": 1,
+      "content_type": 21,
+      "object_id": "2",
+      "object_repr": "Protect Sheet",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 75,
+    "fields": {
+      "action_time": "2020-09-14T21:31:06.915Z",
+      "user": 1,
+      "content_type": 21,
+      "object_id": "2",
+      "object_repr": "Protect Sheet",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 76,
+    "fields": {
+      "action_time": "2020-09-14T21:35:19.118Z",
+      "user": 1,
+      "content_type": 21,
+      "object_id": "3",
+      "object_repr": "Cashflow Forecaster",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 77,
+    "fields": {
+      "action_time": "2020-09-14T21:39:19.041Z",
+      "user": 1,
+      "content_type": 21,
+      "object_id": "4",
+      "object_repr": "Insert Data From Excel To Sql",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 78,
+    "fields": {
+      "action_time": "2020-09-14T21:40:03.032Z",
+      "user": 1,
+      "content_type": 21,
+      "object_id": "5",
+      "object_repr": "Update Connections",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 79,
+    "fields": {
+      "action_time": "2020-09-14T21:44:46.908Z",
+      "user": 1,
+      "content_type": 21,
+      "object_id": "6",
+      "object_repr": "Get Worksheet From Codename",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 80,
+    "fields": {
+      "action_time": "2020-09-14T21:45:42.388Z",
+      "user": 1,
+      "content_type": 21,
+      "object_id": "7",
+      "object_repr": "Function To Extend String",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 81,
+    "fields": {
+      "action_time": "2020-09-14T21:48:59.698Z",
+      "user": 1,
+      "content_type": 21,
+      "object_id": "8",
+      "object_repr": "Determine The Number Of Rows In A Block In Excel",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 82,
+    "fields": {
+      "action_time": "2020-09-14T21:50:03.654Z",
+      "user": 1,
+      "content_type": 21,
+      "object_id": "9",
+      "object_repr": "Is Excel Range Empty?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 83,
+    "fields": {
+      "action_time": "2020-09-14T21:51:06.349Z",
+      "user": 1,
+      "content_type": 21,
+      "object_id": "10",
+      "object_repr": "Interactive Select Of Folder",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 84,
+    "fields": {
+      "action_time": "2020-09-14T21:51:51.577Z",
+      "user": 1,
+      "content_type": 21,
+      "object_id": "11",
+      "object_repr": "Interactive Selection Of File",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 85,
+    "fields": {
+      "action_time": "2020-09-14T21:54:06.937Z",
+      "user": 1,
+      "content_type": 21,
+      "object_id": "12",
+      "object_repr": "Create As Pdf",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 86,
+    "fields": {
+      "action_time": "2020-09-14T21:55:09.796Z",
+      "user": 1,
+      "content_type": 21,
+      "object_id": "13",
+      "object_repr": "Send Email With Outlook From Excel",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 87,
+    "fields": {
+      "action_time": "2020-09-14T21:57:40.654Z",
+      "user": 1,
+      "content_type": 21,
+      "object_id": "14",
+      "object_repr": "Excel - Is Array Allocated?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 88,
+    "fields": {
+      "action_time": "2020-09-14T21:58:24.020Z",
+      "user": 1,
+      "content_type": 21,
+      "object_id": "15",
+      "object_repr": "Does Excel Sheet Exist?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 89,
+    "fields": {
+      "action_time": "2020-09-14T22:04:04.487Z",
+      "user": 1,
+      "content_type": 21,
+      "object_id": "16",
+      "object_repr": "Convert Time Value  To Float",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 90,
+    "fields": {
+      "action_time": "2020-09-14T22:05:45.065Z",
+      "user": 1,
+      "content_type": 21,
+      "object_id": "17",
+      "object_repr": "Excel Clean Numbers",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 91,
+    "fields": {
+      "action_time": "2020-09-14T22:06:31.907Z",
+      "user": 1,
+      "content_type": 21,
+      "object_id": "18",
+      "object_repr": "Update Pivot Tables",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 92,
+    "fields": {
+      "action_time": "2020-09-14T22:11:57.952Z",
+      "user": 1,
+      "content_type": 21,
+      "object_id": "19",
+      "object_repr": "Excel To Word (Early Bind)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 93,
+    "fields": {
+      "action_time": "2020-09-14T22:12:32.534Z",
+      "user": 1,
+      "content_type": 21,
+      "object_id": "20",
+      "object_repr": "Excel To Word (Late Bind)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 94,
+    "fields": {
+      "action_time": "2020-09-15T07:58:14.944Z",
+      "user": 1,
+      "content_type": 17,
+      "object_id": "8",
+      "object_repr": "Word",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 95,
+    "fields": {
+      "action_time": "2020-09-28T08:43:54.222Z",
+      "user": 1,
+      "content_type": 21,
+      "object_id": "21",
+      "object_repr": "Call User Form",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 96,
+    "fields": {
+      "action_time": "2020-09-28T08:45:00.238Z",
+      "user": 1,
+      "content_type": 21,
+      "object_id": "22",
+      "object_repr": "Add Data Row To Excel Table Bottom",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 97,
+    "fields": {
+      "action_time": "2020-09-28T08:45:57.179Z",
+      "user": 1,
+      "content_type": 21,
+      "object_id": "21",
+      "object_repr": "Call User Form",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Code\", \"Draft\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 98,
+    "fields": {
+      "action_time": "2020-09-29T21:06:54.653Z",
+      "user": 1,
+      "content_type": 23,
+      "object_id": "1",
+      "object_repr": "Quote Emailer",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 99,
+    "fields": {
+      "action_time": "2020-10-04T03:09:17.446Z",
+      "user": 1,
+      "content_type": 23,
+      "object_id": "2",
+      "object_repr": "Code Library",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 100,
+    "fields": {
+      "action_time": "2020-10-04T03:09:22.492Z",
+      "user": 1,
+      "content_type": 21,
+      "object_id": "23",
+      "object_repr": "Common Context For Multiple Views",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 101,
+    "fields": {
+      "action_time": "2020-10-04T03:10:38.781Z",
+      "user": 1,
+      "content_type": 21,
+      "object_id": "24",
+      "object_repr": "Combine Dictionary - Context",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 102,
+    "fields": {
+      "action_time": "2020-10-04T03:17:06.929Z",
+      "user": 1,
+      "content_type": 21,
+      "object_id": "25",
+      "object_repr": "Django Direct Query",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  }
+]

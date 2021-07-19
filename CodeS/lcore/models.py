@@ -1,4 +1,7 @@
+from datetime import timedelta
 from django.db import models
+from django.urls import reverse
+from django.utils import timezone
 
 
 # ## Model Managers ## #
@@ -31,7 +34,7 @@ class CategoryManager(models.Manager):
         qs = super(CategoryManager, self).all()
         return qs
 
-    def active(self, group_id):
+    def active(self):
         qs = super(CategoryManager, self).filter(active=True)
         return qs
 
@@ -106,7 +109,37 @@ class SkillManager(models.Manager):
         return qs
 
 
-# ## Models ## #
+class ProcessManager(models.Manager):
+    def all(self):
+        qs = super(ProcessManager, self).all()
+        return qs
+
+    def active(self):
+        qs = super(ProcessManager, self).filter(active=True)
+        return qs
+
+
+# AppFeatureManager
+class AppFeatureManager(models.Manager):
+    def all(self):
+        qs = super(AppFeatureManager, self).all()
+        return qs
+
+    def bugs(self):
+        qs = super(AppFeatureManager, self).filter(bug=True)
+        return qs
+
+    def no_bugs(self):
+        qs = super(AppFeatureManager, self).filter(bug=False)
+        return qs
+
+    def old_test(self):
+        before_time = timezone.now() - timedelta(days=21)
+        qs = super(AppFeatureManager, self).filter(last_test__lte=before_time)
+        return qs
+
+
+# ####################### Models ###################### #
 class Author(models.Model):
     """
     The author identified for an article or code
@@ -176,10 +209,27 @@ class Article(models.Model):
         return self.caption.title()
 
 
+class Process(models.Model):
+    """
+    automtion project
+    """
+    process = models.CharField(max_length=100, unique=True)
+    description = models.CharField(max_length=300, unique=False)
+    active = models.BooleanField(default=True)
+    objects = ProcessManager()
+
+    class Meta:
+        ordering = ['process']
+        verbose_name_plural = 'Processes'
+
+    def __str__(self):
+        return self.process.title()
+
+
 class Code(models.Model):
     """
     Code segment
-    setting project = True makes it a project description
+
     """
 
     author = models.ManyToManyField(Author, blank=False)
@@ -189,7 +239,8 @@ class Code(models.Model):
     draft = models.BooleanField(default=True)
     visible = models.BooleanField(default=True)
     tags = models.ManyToManyField(Tag, blank=True)
-    article_file = models.FileField(upload_to='blog_article', blank=True, null=True)
+    process = models.ManyToManyField(Process, blank=True)
+    article_file = models.FileField(upload_to='code_files', blank=True, null=True)
     objects = CodeManager()
 
     class Meta:
@@ -197,6 +248,12 @@ class Code(models.Model):
 
     def __str__(self):
         return self.extract.title()
+
+    def get_absolute_url(self):
+        return reverse("detail", kwargs={"id": self.id})
+
+    def file_url(self):
+        return reverse("code_file", kwargs={"id": self.id, "path": self.article_file})
 
 
 class Reference(models.Model):
@@ -225,6 +282,7 @@ class Services(models.Model):
 
     class Meta:
         ordering = ['priority']
+        verbose_name_plural = 'Services'
 
     def __str__(self):
         return self.service.title()
@@ -277,3 +335,43 @@ class Skill(models.Model):
 
     def __str__(self):
         return self.skill.title()
+
+
+# ####################### Application ###################### #
+class Appfeature(models.Model):
+    """
+    Contains the features of the particular application
+    This can be used for trcking and testing
+    """
+    description = models.CharField(max_length=200, blank=False, unique=True)
+    date_added = models.DateTimeField(auto_now=False, auto_now_add=True)
+    last_test = models.DateTimeField(auto_now=False, auto_now_add=False, blank=True, null=True)
+    last_bug = models.CharField(max_length=200, blank=True, unique=False)
+    bug = models.BooleanField(default=False)
+    objects = AppFeatureManager()
+
+    class Meta:
+        ordering = ['bug', 'description']
+
+    def __str__(self):
+        label = self.description.title()
+        if self.bug:
+            label += ' - bug'
+        return label
+
+    def get_absolute_url(self):
+        return reverse("feature_detail", kwargs={"id": self.id})
+
+
+class Lookup(models.Model):
+    """
+    Lookup table for values not hardcoded. General structure that caters for multiple data types
+    """
+    key = models.CharField(max_length=50, blank=False, unique=True)
+    ref_value = models.CharField(max_length=50, blank=True, null=True)
+    ref_int = models.IntegerField(blank=True)
+    ref_date = models.DateTimeField(blank=True)
+    ref_bool = models.BooleanField(blank=True)
+
+    def __str__(self):
+        return self.key.title()

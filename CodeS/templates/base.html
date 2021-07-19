@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-  <script src="https://kit.fontawesome.com/1f8531230c.js" crossorigin="anonymous"></script>-->
-  <title>{% block head_title %}A Sharp Systems{% endblock head_title%}</title>
+-->
+  <script src="https://kit.fontawesome.com/1f8531230c.js" crossorigin="anonymous"></script>
+  <title>{% block head_title %}Code Snippets{% endblock head_title%}</title>
   <meta content="" name="descriptions">
   <meta content="" name="keywords">
 
@@ -78,6 +78,8 @@
           <li><a href="{% url 'lcore:services' %}">Services</a></li>
           <!--<li><a href="portfolio.html">Portfolio</a></li>-->
           <li><a href="{% url 'lcore:blog' %}">Blog</a></li>
+          <li><a href="{% url 'lcore:code_list' %}">Code Samples</a></li>
+          <li><a href="{% url 'lcore:feature_list' %}">AppSelf</a></li>
           <li><a href="{% url 'lcore:contact' %}">Contact</a></li>
 
         </ul>
@@ -187,9 +189,16 @@
 
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.6.2/marked.min.js"></script>
+
   <!-- Vendor JS Files -->
-  <script src=" {% static 'vendor/jquery/jquery.min.js'%} "></script>
-  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js'%} "></script>
+  <!--<script src=" {% static 'vendor/jquery/jquery.min.js'%} "></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js'%} "></script>-->
   <script src="{% static 'vendor/jquery.easing/jquery.easing.min.js'%} "></script>
   <script src="{% static 'vendor/php-email-form/validate.js'%} "></script>
   <script src="{% static 'vendor/jquery-sticky/jquery.sticky.js'%} "></script>
@@ -204,12 +213,5 @@
 
 
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.6.2/marked.min.js"></script>
--->
     </body>
 </html>

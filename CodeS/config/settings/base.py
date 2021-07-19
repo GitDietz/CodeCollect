@@ -20,7 +20,7 @@ if READ_DOT_ENV_FILE:
 # GENERAL
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#debug
-DEBUG = env.bool("DJANGO_DEBUG", False)
+DEBUG = env.bool("DJANGO_DEBUG", True)
 # Local time zone. Choices are
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # though not all of them may be available with every OS.
@@ -47,10 +47,20 @@ LOCALE_PATHS = [str(ROOT_DIR / "locale")]
 # DATABASES = {
 #     #"default": env.db("DATABASE_URL", default="postgres:///CodeS")
 # }
+# DATABASES = {
+#     "default": {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': str(ROOT_DIR / 'db.sqlite'),
+#     }
+# }
 DATABASES = {
     "default": {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': str(ROOT_DIR / 'db.sqlite'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PW'),
+        'HOST': '127.0.0.1',
+        'PORT': '5432'
     }
 }
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
@@ -73,6 +83,10 @@ DJANGO_APPS = [
     "django.contrib.staticfiles",
     # "django.contrib.humanize", # Handy template tags
     "django.contrib.admin",
+    # datepicker for testing
+    #'django_forms_bootstrap',
+    #'bootstrap4',
+    'bootstrap_datepicker_plus',
     "django.forms",
 ]
 THIRD_PARTY_APPS = [
@@ -85,6 +99,7 @@ THIRD_PARTY_APPS = [
 LOCAL_APPS = [
     "CodeS.users.apps.UsersConfig",
     'lcore',
+    'django_cleanup.apps.CleanupConfig', #keep this last in the list
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -194,6 +209,9 @@ TEMPLATES = [
                 "django.contrib.messages.context_processors.messages",
                 "CodeS.utils.context_processors.settings_context",
             ],
+            'libraries': {
+                 'customtags': 'templatetags.customtags', #can add others in the same way
+            },
         },
     }
 ]

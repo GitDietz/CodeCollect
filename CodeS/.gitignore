@@ -180,6 +180,8 @@ typings/
 .idea/**/dynamic.xml
 .idea/**/uiDesigner.xml
 
+.DS_Store
+
 # Gradle:
 .idea/**/gradle.xml
 .idea/**/libraries

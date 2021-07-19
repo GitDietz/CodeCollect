@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% load customtags %}
+{% block content %}
+{% load static %}
+<main id="main">
+<br><br>
+<!-- ======= Breadcrumbs ======= -->
+<section id="breadcrumbs" class="breadcrumbs">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center">
+      <h2>Application Features for testing</h2>
+      <ol>
+        <li><a href="{% url 'lcore:home' %}">Home</a></li>
+        <li>Features List</li>
+      </ol>
+    </div>
+  </div>
+</section><!-- End Breadcrumbs -->
+<div class="row content">
+  <div class="col-lg-10" data-aos="fade-right">
+      <form method="get">
+        {{ filter_form.form.as_p }}
+      <button type="submit">{{filter_button}}</button>
+      </form>
+  </div>
+  <div class="col-lg-10" data-aos="fade-right">
+    <a href="{% url 'lcore:feature_new' %}"><i class="far fa-plus-square"></i></a>
+  </div>
+</div>
+
+<div class="row mt-5 justify-content-center" data-aos="fade-up">
+    <div class="col-lg-10">
+      {% for item in object_list %}
+        <div class="form-row">
+          <div class="col-lg-7">
+            <a href="{% url 'lcore:feature_detail' pk=item.pk %}"><i class="far fa-edit"></i></a>
+            {{ item }}
+
+          </div>
+        </div>
+      {% empty %}
+        <p>No list yet!</p>
+      {% endfor %}
+      <br>
+      {% if object_list.has_other_pages %}
+        <ul class="pagination pagination-sm">
+          {% if object_list.has_previous %}
+            <li class="page-item">
+                <a class="page-link" href="? {% param_replace page=object_list.previous_page_number %}">Previous</a>
+            </li>
+          {% else %}
+            <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1">Previous</a>
+            </li>
+          {% endif %}
+          {% for i in object_list.paginator.page_range %}
+            {% if object_list.number == i %}
+              <li class="page-item active">
+                  <span class="page-link">{{ i }}<span class="sr-only">(current)</span>
+                  </span>
+            {% else %}
+              <li class="page-item"><a class="page-link"  href="?{% param_replace page=i %}">{{ i }}</a></li>
+            {% endif %}
+          {% endfor %}
+          {% if object_list.has_next %}
+            <li class="page-item">
+                <a class="page-link" href="? {% param_replace page=object_list.next_page_number %}">Next</a>
+            </li>
+          {% else %}
+            <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1">Next</a>
+            </li>
+          {% endif %}
+        </ul>
+      {% else %}
+        <br>
+      {% endif %}
+    </div>
+</div>
+</main><!-- End #main -->
+<script>
+
+</script>
+
+{% endblock content %}
