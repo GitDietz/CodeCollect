@@ -1,7 +1,7 @@
 from django.contrib import admin
 
-from .models import (Services, Reference, Article, 
-Category, Tag, Customer, Feature, Skill, Author, Code, Process )
+from .models import (Services, Reference, Article,
+                     Category, Tag, Customer, Feature, Skill, Author, Code, Process, Lookup)
 
 
 class ArticleAdmin(admin.ModelAdmin):
@@ -113,3 +113,13 @@ class ProcessAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Process, ProcessAdmin)
+
+
+class LookupAdmin(admin.ModelAdmin):
+    list_display = ['key']
+
+    class Meta:
+        model = Lookup
+
+
+admin.site.register(Lookup, LookupAdmin)

@@ -363,3 +363,15 @@ class Appfeature(models.Model):
         return reverse("feature_detail", kwargs={"id": self.id})
 
 
+class Lookup(models.Model):
+    """
+    Lookup table for values not hardcoded. General structure that caters for multiple data types
+    """
+    key = models.CharField(max_length=50, blank=False, unique=True)
+    ref_value = models.CharField(max_length=50, blank=True, null=True)
+    ref_int = models.IntegerField(blank=True)
+    ref_date = models.DateTimeField(blank=True)
+    ref_bool = models.BooleanField(blank=True)
+
+    def __str__(self):
+        return self.key.title()

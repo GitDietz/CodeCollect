@@ -257,7 +257,7 @@ def code_file(request, pk):
     root = pathlib.Path(conf_settings.MEDIA_ROOT)
     item = Code.objects.get(pk=pk)
     c_file = item.article_file.path
-    #file_path = pathlib.Path.joinpath(root, c_file)
+    # file_path = pathlib.Path.joinpath(root, c_file)
     file_type = pathlib.Path(c_file).suffix
     print(f'file type is {file_type}')
     if file_type != 'pdf':
@@ -315,8 +315,8 @@ def experiments(request):
     # codelist = Code.objects.raw(sub_query) # yields the raw queryset type which does not work here
     # codelist = Code.objects.all()
     # code_ids = list(code_qs.values_list('id', flat=True))
-    filter_query = new_query.replace("group","where C.id in (" +  ",".join(map(str,code_ids)) + ") group")
-    tag_list = get_direct_query_dict(filter_query)
+    # filter_query = new_query.replace("group","where C.id in (" + ",".join(map(str, code_ids)) + ") group")
+    # tag_list = get_direct_query_dict(filter_query)
 
     #'tag_list': tag_list
     return None
@@ -330,7 +330,7 @@ def test_multi(request):
     template = 'code_list.html'
     local_context = {
         'object_list': codelist,
-        #'filter_form': code_filtered,
+        # 'filter_form': code_filtered,
         'notice': 'Some sort of notice',
     }
 

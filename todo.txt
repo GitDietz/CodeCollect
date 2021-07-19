@@ -1,0 +1,5 @@
+Things that needs doing on this project:
+
+Remove the corporate web stuff - keep the layout
+update the about content
+go through the emails and add items to this
