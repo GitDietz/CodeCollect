@@ -1,6 +1,8 @@
-Thanks for downloading this template!
+what is this?
+contains lcore which has all the models used in the ASW website
+CodeS has the user models
 
-Template Name: Company
-Template URL: https://bootstrapmade.com/company-free-html-bootstrap-template/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+urls are only covering the corporate website
+This project will now contain the test works for modal forms
+
+
